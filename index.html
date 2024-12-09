@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -20,7 +20,9 @@
   <header>
     <nav class="navbar">
       <div class="nav-logo">Frnas Bukhari</div>
-      <button class="nav-toggle" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+        ☰
+      </button>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
@@ -29,11 +31,10 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button class="theme-toggle" aria-label="Toggle theme" onclick="toggleTheme()">🌗</button>
     </nav>
-    <section class="hero" data-animate="fade-in">
+    <section class="hero">
       <div class="hero-overlay"></div>
-      <div class="hero-content section-inner">
+      <div class="hero-content">
         <h1>Frnas Bukhari</h1>
         <p class="subheading">🚀 AI & Computer Science Student | Business Intelligence | Data Analysis</p>
         <p class="location"><i class="fas fa-map-marker-alt"></i> Birmingham, United Kingdom | Jeddah, Saudi Arabia</p>
@@ -43,145 +44,131 @@
         </p>
         <a class="hero-button" href="#about">Learn More</a>
       </div>
-      <!-- Subtle SVG background pattern for illustration -->
-      <div class="hero-pattern"></div>
     </section>
   </header>
 
   <main>
     <!-- About Section -->
-    <section id="about" class="about-section" data-animate="fade-in">
-      <div class="section-inner">
-        <h2><i class="fas fa-user"></i> About Me</h2>
-        <div class="about-content">
-          <img src="images/headshot.png" alt="Profile Picture of Frnas Bukhari" class="profile-image" />
-          <div class="about-text">
-            <p>Hi! I am Frnas Bukhari, a final-year Artificial Intelligence and Computer Science student at the University of Birmingham, pursuing my degree with First Class Honours. My academic and professional journey has been shaped by a deep passion for innovation and a commitment to leveraging technology to address real-world challenges.</p>
-            <p>Over the course of my studies and internships, I have gained significant experience in AI development, data visualization, and automation through impactful roles at PwC and Procter & Gamble. My work focuses on applying cutting-edge technologies such as computer vision, machine learning, and interactive data analytics to solve complex problems. In addition, I actively lead and mentor others as the President of the Nahda Club, empowering students from the MENA region to achieve their academic and professional goals.</p>
-          </div>
+    <section id="about" class="about-section">
+      <h2><i class="fas fa-user"></i> About Me</h2>
+      <div class="about-content">
+        <img src="images/headshot.png" alt="Profile Picture of Frnas Bukhari" class="profile-image" />
+        <div class="about-text">
+          <p>Hi! I am Frnas Bukhari, a final-year Artificial Intelligence and Computer Science student at the University of Birmingham, pursuing my degree with First Class Honours. My academic and professional journey has been shaped by a deep passion for innovation and a commitment to leveraging technology to address real-world challenges.</p>
+          <p>Over the course of my studies and internships, I have gained significant experience in AI development, data visualization, and automation through impactful roles at PwC and Procter & Gamble. My work focuses on applying cutting-edge technologies such as computer vision, machine learning, and interactive data analytics to solve complex problems. In addition, I actively lead and mentor others as the President of the Nahda Club, empowering students from the MENA region to achieve their academic and professional goals.</p>
         </div>
       </div>
     </section>
 
-    <!-- Experience Section with Parallax Background -->
-    <section id="experience" class="experience-section" data-animate="fade-in">
-      <div class="section-inner">
-        <h2><i class="fas fa-briefcase"></i> Experience</h2>
-        <div class="experience-item">
-          <h3><img src="images/nahda-logo.png" alt="Nahda Logo" class="company-logo"/> Nahda Club</h3>
-          <p><strong>President | Sep 2024 – Present</strong></p>
-          <ul>
-            <li><strong>Leadership and Mentorship:</strong> Founded and lead Nahda, supporting MENA students in their academic and professional growth.</li>
-            <li><strong>Workshop Development:</strong> Organized and conducted workshops, including semester preparation and internship guidance.</li>
-            <li><strong>Collaborative Team Building:</strong> Introduced a flat, project-based structure, encouraging team ownership and a collaborative culture.</li>
-          </ul>
-        </div>
-        
-        <div class="experience-item">
-          <h3><img src="images/pg-logo.png" alt="Procter & Gamble Logo" class="company-logo"/> Procter & Gamble (P&G)</h3>
-          <p><strong>Sales Information Technology Intern | July 2024 – Sep 2024</strong></p>
-          <ul>
-            <li><strong>Data Transformation Project:</strong> Led the Commercial Master Data Transformation pilot, later adopted globally. Automated data integration, enhancing accuracy and efficiency.</li>
-            <li><strong>Interactive Dashboards:</strong> Designed automated Power BI dashboards for real-time insights, enabling informed decision-making.</li>
-          </ul>
-        </div>
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+      <h2><i class="fas fa-briefcase"></i> Experience</h2>
+      <div class="experience-item">
+        <h3><img src="images/nahda-logo.png" alt="Nahda Logo" class="company-logo"/> Nahda Club</h3>
+        <p><strong>President | Sep 2024 – Present</strong></p>
+        <ul>
+          <li><strong>Leadership and Mentorship:</strong> Founded and lead Nahda, supporting MENA students in their academic and professional growth.</li>
+          <li><strong>Workshop Development:</strong> Organized and conducted workshops, including semester preparation and internship guidance.</li>
+          <li><strong>Collaborative Team Building:</strong> Introduced a flat, project-based structure, encouraging team ownership and a collaborative culture.</li>
+        </ul>
+      </div>
+      
+      <div class="experience-item">
+        <h3><img src="images/pg-logo.png" alt="Procter & Gamble Logo" class="company-logo"/> Procter & Gamble (P&G)</h3>
+        <p><strong>Sales Information Technology Intern | July 2024 – Sep 2024</strong></p>
+        <ul>
+          <li><strong>Data Transformation Project:</strong> Led the Commercial Master Data Transformation pilot, later adopted globally. Automated data integration across multiple sources, eliminating manual efforts and enhancing accuracy and efficiency.</li>
+          <li><strong>Interactive Dashboards:</strong> Designed automated Power BI dashboards for real-time insights, enabling informed decision-making at the leadership level.</li>
+        </ul>
+      </div>
 
-        <div class="experience-item">
-          <h3><img src="images/pwc-logo.png" alt="PwC Logo" class="company-logo"/> PwC</h3>
-          <p><strong>Emerging Technologies Lab Intern | July 2023 – Aug 2023</strong></p>
-          <ul>
-            <li><strong>AI Prototype Optimization:</strong> Enhanced a computer vision prototype with Python (OpenCV, NumPy) & ChatGPT integrations.</li>
-            <li><strong>Ethical AI Research:</strong> Investigated ethical AI principles and presented findings to the team.</li>
-            <li><strong>Client Engagement:</strong> Demonstrated prototypes, showcasing innovative tech solutions.</li>
-          </ul>
-        </div>
+      <div class="experience-item">
+        <h3><img src="images/pwc-logo.png" alt="PwC Logo" class="company-logo"/> PwC</h3>
+        <p><strong>Emerging Technologies Lab Intern | July 2023 – Aug 2023</strong></p>
+        <ul>
+          <li><strong>AI Prototype Optimization:</strong> Enhanced a computer vision prototype by integrating Python libraries (OpenCV, NumPy) and ChatGPT capabilities.</li>
+          <li><strong>Ethical AI Research:</strong> Conducted in-depth research on ethical AI principles and presented findings to the team.</li>
+          <li><strong>Client Engagement:</strong> Demonstrated prototypes to clients, showcasing innovative applications of emerging technologies.</li>
+        </ul>
       </div>
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="education-section" data-animate="fade-in">
-      <div class="section-inner">
-        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-        <div class="card">
-          <h3>
-            <img src="images/univ-logo.png" alt="University of Birmingham Logo" class="company-logo"/>
-            University of Birmingham
-          </h3>
-          <p><em>BSc. Artificial Intelligence and Computer Science (2021 – 2025)</em></p>
-          <ul>
-            <li>Achieving First Class Honours (GPA: 4/4).</li>
-            <li>Relevant Courses: AI, Data Structures & Algorithms, Software Engineering, Intelligent Data Analysis.</li>
-          </ul>
-        </div>
+    <section id="education" class="education-section">
+      <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+      <div class="card">
+        <h3>
+          <img src="images/univ-logo.png" alt="University of Birmingham Logo" class="company-logo"/>
+          University of Birmingham
+        </h3>
+        <p><em>BSc. Artificial Intelligence and Computer Science (2021 – 2025)</em></p>
+        <ul>
+          <li>Achieving First Class Honours (GPA: 4/4).</li>
+          <li>Relevant Courses: Artificial Intelligence, Data Structures & Algorithms, Software Engineering, Intelligent Data Analysis.</li>
+        </ul>
       </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills-section" data-animate="fade-in">
-      <div class="section-inner">
-        <h2><i class="fas fa-tools"></i> Skills</h2>
-        <div class="card">
-          <ul>
-            <li><strong>Programming Languages:</strong> Python, Java, C++, MATLAB</li>
-            <li><strong>AI & Data Tools:</strong> OpenCV, TensorFlow, NumPy, pandas, matplotlib, Power BI</li>
-            <li><strong>Languages:</strong> English (Fluent), Arabic (Native)</li>
-          </ul>
-        </div>
+    <section id="skills" class="skills-section">
+      <h2><i class="fas fa-tools"></i> Skills</h2>
+      <div class="card">
+        <ul>
+          <li><strong>Programming Languages:</strong> Python, Java, C++, MATLAB</li>
+          <li><strong>AI & Data Tools:</strong> OpenCV, TensorFlow, NumPy, pandas, matplotlib, Power BI</li>
+          <li><strong>Languages:</strong> English (Fluent), Arabic (Native)</li>
+        </ul>
       </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects-section" data-animate="fade-in">
-      <div class="section-inner">
-        <h2><i class="fas fa-lightbulb"></i> Projects</h2>
-        <div class="project-cards">
-          <div class="project-card">
-            <h3>Leveraging LLMs in Sentiment Analysis for Hospitality (final year project)</h3>
-            <p class="project-date"><i class="far fa-calendar-alt"></i> Oct 2024 - Present</p>
-            <p>Developing a sentiment analysis system using LLMs to inform brand reputation strategies in hospitality.</p>
-          </div>
-          
-          <div class="project-card">
-            <h3>Glow Brush (Gamified Smart Toothbrush)</h3>
-            <p class="project-date"><i class="far fa-calendar-alt"></i> Nov 2024 - Dec 2024</p>
-            <p>Co-created a smart toothbrush and app that gamify oral hygiene for children, applying HCI and iterative testing.</p>
-          </div>
+    <section id="projects" class="projects-section">
+      <h2><i class="fas fa-lightbulb"></i> Projects</h2>
+      <div class="project-cards">
+        <div class="project-card">
+          <h3>Leveraging LLMs in Sentiment Analysis for Hospitality (final year project)</h3>
+          <p class="project-date"><i class="far fa-calendar-alt"></i> Oct 2024 - Present</p>
+          <p>Developing a sentiment analysis system using LLMs to identify guest perceptions and inform brand reputation strategies in hospitality.</p>
+        </div>
+        
+        <div class="project-card">
+          <h3>Glow Brush (Gamified Smart Toothbrush)</h3>
+          <p class="project-date"><i class="far fa-calendar-alt"></i> Nov 2024 - Dec 2024</p>
+          <p>Co-created a smart toothbrush and app that gamify oral hygiene for children. Applied HCI methods, led usability testing, and refined prototypes for an engaging user experience.</p>
+        </div>
 
-          <div class="project-card">
-            <h3>Commercial Master Data Transformation (P&G)</h3>
-            <p class="project-date"><i class="far fa-calendar-alt"></i> July 2024 - Sep 2024</p>
-            <p>Led data harmonization initiatives, showcasing scalable data transformation globally.</p>
-          </div>
+        <div class="project-card">
+          <h3>Commercial Master Data Transformation (P&G)</h3>
+          <p class="project-date"><i class="far fa-calendar-alt"></i> July 2024 - Sep 2024</p>
+          <p>Led data harmonization initiatives, unifying data hierarchies and eliminating manual mapping. Implemented global solutions showcasing scalable data transformation.</p>
+        </div>
 
-          <div class="project-card">
-            <h3>Power BI Dashboards for Strategic Insights (P&G)</h3>
-            <p class="project-date"><i class="far fa-calendar-alt"></i> Aug 2024 - Sep 2024</p>
-            <p>Created dashboards for real-time insights, streamlining decision-making.</p>
-          </div>
+        <div class="project-card">
+          <h3>Power BI Dashboards for Strategic Insights (P&G)</h3>
+          <p class="project-date"><i class="far fa-calendar-alt"></i> Aug 2024 - Sep 2024</p>
+          <p>Created interactive dashboards replacing manual processes, delivering real-time insights and streamlined decision-making.</p>
+        </div>
 
-          <div class="project-card">
-            <h3>HeadCount Application (My Network Feature)</h3>
-            <p class="project-date"><i class="far fa-calendar-alt"></i> Jan 2024 - Apr 2024</p>
-            <p>Implemented a full-stack “My Network” module to enhance event management and connectivity.</p>
-          </div>
-          
-          <div class="project-card">
-            <h3>Sticky-Notes Image Generator Prototype (PwC)</h3>
-            <p class="project-date"><i class="far fa-calendar-alt"></i> July 2023 - Aug 2023</p>
-            <p>Enhanced a vision/ML system to generate images from sticky note text, integrating ChatGPT for accuracy.</p>
-          </div>
+        <div class="project-card">
+          <h3>HeadCount Application (My Network Feature)</h3>
+          <p class="project-date"><i class="far fa-calendar-alt"></i> Jan 2024 - Apr 2024</p>
+          <p>Implemented a full-stack “My Network” module for an event management app, enabling user connections, real-time updates, and seamless event organization.</p>
+        </div>
+        
+        <div class="project-card">
+          <h3>Sticky-Notes Image Generator Prototype (PwC)</h3>
+          <p class="project-date"><i class="far fa-calendar-alt"></i> July 2023 - Aug 2023</p>
+          <p>Enhanced a computer vision and ML system generating images from text extracted from sticky notes. Integrated ChatGPT for accurate keyword extraction.</p>
         </div>
       </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section" data-animate="fade-in">
-      <div class="section-inner">
-        <h2><i class="fas fa-envelope"></i> Contact</h2>
-        <p><i class="fas fa-envelope"></i> <a href="mailto:fernas-2002@hotmail.com">fernas-2002@hotmail.com</a></p>
-        <p><i class="fas fa-map-marker-alt"></i> Birmingham, United Kingdom | Jeddah, Saudi Arabia</p>
-        <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/frnas" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
-      </div>
+    <section id="contact" class="contact-section">
+      <h2><i class="fas fa-envelope"></i> Contact</h2>
+      <p><i class="fas fa-envelope"></i> <a href="mailto:fernas-2002@hotmail.com">fernas-2002@hotmail.com</a></p>
+      <p><i class="fas fa-map-marker-alt"></i> Birmingham, United Kingdom | Jeddah, Saudi Arabia</p>
+      <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/frnas" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
     </section>
   </main>
 
