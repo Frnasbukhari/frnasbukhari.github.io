@@ -9,21 +9,22 @@
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <!-- Google Fonts: Source Code Pro for a techy feel -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;700&display=swap" 
+    rel="stylesheet">
 
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-jQdfd2H5G5+qFy7imzFtW2BhM8Ke8kM2hfLA2EJHpZ6ODrHvs4w9f2ZLmZLoAwx7aFNQ+cdlBlJkxCRjdV5W5Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <header>
     <nav class="navbar">
       <div class="nav-logo">Frnas Bukhari</div>
-      <button class="nav-toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navigation-menu" onclick="toggleMenu()">
         ☰
       </button>
-      <ul class="nav-links">
+      <ul class="nav-links" id="navigation-menu" role="menubar">
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#education">Education</a></li>
@@ -33,14 +34,15 @@
       </ul>
     </nav>
     <section class="hero">
-      <div class="hero-overlay"></div>
       <div class="hero-content">
         <h1>Frnas Bukhari</h1>
         <p class="subheading">🚀 AI & Computer Science Student | Business Intelligence | Data Analysis</p>
-        <p class="location"><i class="fas fa-map-marker-alt"></i> Birmingham, United Kingdom | Jeddah, Saudi Arabia</p>
+        <p class="location">
+          <img src="icons/location.svg" alt="Location Icon" class="icon"> Birmingham, United Kingdom | Jeddah, Saudi Arabia
+        </p>
         <p>
-          <i class="fas fa-envelope"></i> <a href="mailto:fernas-2002@hotmail.com">fernas-2002@hotmail.com</a> | 
-          <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/frnas" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <img src="icons/email.svg" alt="Email Icon" class="icon"> <a href="mailto:fernas-2002@hotmail.com">fernas-2002@hotmail.com</a> |
+          <img src="icons/linkedin.svg" alt="LinkedIn Icon" class="icon"> <a href="https://www.linkedin.com/in/frnas" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </p>
         <a class="hero-button" href="#about">Learn More</a>
       </div>
@@ -50,7 +52,7 @@
   <main>
     <!-- About Section -->
     <section id="about" class="about-section">
-      <h2><i class="fas fa-user"></i> About Me</h2>
+      <h2><img src="icons/user.svg" alt="User Icon" class="heading-icon"> About Me</h2>
       <div class="about-content">
         <img src="images/headshot.png" alt="Profile Picture of Frnas Bukhari" class="profile-image" />
         <div class="about-text">
@@ -62,7 +64,7 @@
 
     <!-- Experience Section -->
     <section id="experience" class="experience-section">
-      <h2><i class="fas fa-briefcase"></i> Experience</h2>
+      <h2><img src="icons/briefcase.svg" alt="Briefcase Icon" class="heading-icon"> Experience</h2>
       <div class="experience-item">
         <h3><img src="images/nahda-logo.png" alt="Nahda Logo" class="company-logo"/> Nahda Club</h3>
         <p><strong>President | Sep 2024 – Present</strong></p>
@@ -95,7 +97,7 @@
 
     <!-- Education Section -->
     <section id="education" class="education-section">
-      <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+      <h2><img src="icons/graduation-cap.svg" alt="Graduation Cap Icon" class="heading-icon"> Education</h2>
       <div class="card">
         <h3>
           <img src="images/univ-logo.png" alt="University of Birmingham Logo" class="company-logo"/>
@@ -111,7 +113,7 @@
 
     <!-- Skills Section -->
     <section id="skills" class="skills-section">
-      <h2><i class="fas fa-tools"></i> Skills</h2>
+      <h2><img src="icons/tools.svg" alt="Tools Icon" class="heading-icon"> Skills</h2>
       <div class="card">
         <ul>
           <li><strong>Programming Languages:</strong> Python, Java, C++, MATLAB</li>
@@ -123,41 +125,41 @@
 
     <!-- Projects Section -->
     <section id="projects" class="projects-section">
-      <h2><i class="fas fa-lightbulb"></i> Projects</h2>
+      <h2><img src="icons/lightbulb.svg" alt="Lightbulb Icon" class="heading-icon"> Projects</h2>
       <div class="project-cards">
         <div class="project-card">
           <h3>Leveraging LLMs in Sentiment Analysis for Hospitality (final year project)</h3>
-          <p class="project-date"><i class="far fa-calendar-alt"></i> Oct 2024 - Present</p>
+          <p class="project-date">Oct 2024 - Present</p>
           <p>Developing a sentiment analysis system using LLMs to identify guest perceptions and inform brand reputation strategies in hospitality.</p>
         </div>
         
         <div class="project-card">
           <h3>Glow Brush (Gamified Smart Toothbrush)</h3>
-          <p class="project-date"><i class="far fa-calendar-alt"></i> Nov 2024 - Dec 2024</p>
+          <p class="project-date">Nov 2024 - Dec 2024</p>
           <p>Co-created a smart toothbrush and app that gamify oral hygiene for children. Applied HCI methods, led usability testing, and refined prototypes for an engaging user experience.</p>
         </div>
 
         <div class="project-card">
           <h3>Commercial Master Data Transformation (P&G)</h3>
-          <p class="project-date"><i class="far fa-calendar-alt"></i> July 2024 - Sep 2024</p>
+          <p class="project-date">July 2024 - Sep 2024</p>
           <p>Led data harmonization initiatives, unifying data hierarchies and eliminating manual mapping. Implemented global solutions showcasing scalable data transformation.</p>
         </div>
 
         <div class="project-card">
           <h3>Power BI Dashboards for Strategic Insights (P&G)</h3>
-          <p class="project-date"><i class="far fa-calendar-alt"></i> Aug 2024 - Sep 2024</p>
+          <p class="project-date">Aug 2024 - Sep 2024</p>
           <p>Created interactive dashboards replacing manual processes, delivering real-time insights and streamlined decision-making.</p>
         </div>
 
         <div class="project-card">
           <h3>HeadCount Application (My Network Feature)</h3>
-          <p class="project-date"><i class="far fa-calendar-alt"></i> Jan 2024 - Apr 2024</p>
+          <p class="project-date">Jan 2024 - Apr 2024</p>
           <p>Implemented a full-stack “My Network” module for an event management app, enabling user connections, real-time updates, and seamless event organization.</p>
         </div>
         
         <div class="project-card">
           <h3>Sticky-Notes Image Generator Prototype (PwC)</h3>
-          <p class="project-date"><i class="far fa-calendar-alt"></i> July 2023 - Aug 2023</p>
+          <p class="project-date">July 2023 - Aug 2023</p>
           <p>Enhanced a computer vision and ML system generating images from text extracted from sticky notes. Integrated ChatGPT for accurate keyword extraction.</p>
         </div>
       </div>
@@ -165,10 +167,19 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
-      <h2><i class="fas fa-envelope"></i> Contact</h2>
-      <p><i class="fas fa-envelope"></i> <a href="mailto:fernas-2002@hotmail.com">fernas-2002@hotmail.com</a></p>
-      <p><i class="fas fa-map-marker-alt"></i> Birmingham, United Kingdom | Jeddah, Saudi Arabia</p>
-      <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/frnas" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+      <h2><img src="icons/envelope.svg" alt="Envelope Icon" class="heading-icon"> Contact</h2>
+      <p>
+        <img src="icons/email.svg" alt="Email Icon" class="icon"> 
+        <a href="mailto:fernas-2002@hotmail.com">fernas-2002@hotmail.com</a>
+      </p>
+      <p>
+        <img src="icons/location.svg" alt="Location Icon" class="icon">
+        Birmingham, United Kingdom | Jeddah, Saudi Arabia
+      </p>
+      <p>
+        <img src="icons/linkedin.svg" alt="LinkedIn Icon" class="icon"> 
+        <a href="https://www.linkedin.com/in/frnas" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </p>
     </section>
   </main>
 
