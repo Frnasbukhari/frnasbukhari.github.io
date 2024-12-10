@@ -2,35 +2,36 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Source Code Pro', monospace;
-  background: linear-gradient(135deg, #0F111A 0%, #1C1F2A 100%);
-  color: #ECEFF4;
+  /* New vibrant gradient background */
+  background: linear-gradient(135deg, #191a3d 0%, #0d0e23 100%);
+  color: #CBD3E1; /* Adjusted to a slightly lighter, more readable color */
   scroll-behavior: smooth;
 }
 
 h1, h2, h3 {
   font-weight: 700;
-  color: #88C0D0;
+  color: #00f3ff; /* More vibrant neon cyan for headings */
 }
 
 p, li {
   line-height: 1.6em;
-  color: #D8DEE9;
+  color: #CBD3E1; /* Paragraph text color adjusted to match the new scheme */
 }
 
 a {
-  color: #81A1C1;
+  color: #00fff2; /* Bright cyan for links */
   text-decoration: none;
   transition: color 0.3s, border-bottom 0.3s;
   border-bottom: 1px solid transparent;
 }
 
 a:hover {
-  color: #8FBCBB;
-  border-bottom: 1px solid #8FBCBB;
+  color: #39ff14; /* Neon green on hover */
+  border-bottom: 1px solid #39ff14;
 }
 
 a:focus {
-  outline: 2px solid #88C0D0;
+  outline: 2px solid #00f3ff; /* Outline matches heading color */
   outline-offset: 4px;
 }
 
@@ -50,7 +51,7 @@ a:focus {
 .nav-logo {
   font-size: 1.5em;
   font-weight: 700;
-  color: #88C0D0;
+  color: #00f3ff; /* Match heading color */
 }
 
 .nav-links {
@@ -102,7 +103,7 @@ a:focus {
 }
 
 .hero-button {
-  background: #88C0D0;
+  background: #00fff2; /* Button background changed to match link color */
   color: #2E3440;
   padding: 15px 30px;
   text-decoration: none;
@@ -115,7 +116,7 @@ a:focus {
 }
 
 .hero-button:hover {
-  background: #81A1C1;
+  background: #00f3ff; /* On hover, matches heading color */
   transform: translateY(-2px);
 }
 
@@ -129,11 +130,10 @@ a:focus {
   animation: blink 1.5s infinite;
   display: inline-block;
   font-weight: bold;
-  color: #ECEFF4; /* Match your text color */
-  font-size: 1em; /* Adjust size if needed */
+  color: #ECEFF4;
+  font-size: 1em;
 }
 
-/* Stagger the animation delays so the dots appear in sequence */
 .dots span:nth-child(1) {
   animation-delay: 0s;
 }
@@ -281,7 +281,7 @@ section {
 
 /* Contact Section */
 .contact-section p a:hover {
-  border-bottom: 1px solid #88C0D0;
+  border-bottom: 1px solid #00f3ff; /* Match heading and outline color */
 }
 
 /* Icons */
