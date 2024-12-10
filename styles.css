@@ -160,6 +160,7 @@ section {
   height: auto;
   vertical-align: middle;
   margin-right: 10px;
+  filter: invert(1) brightness(2);
 }
 
 /* Experience Section */
