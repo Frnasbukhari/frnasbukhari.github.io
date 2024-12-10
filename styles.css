@@ -2,36 +2,36 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Source Code Pro', monospace;
-  /* New vibrant gradient background */
-  background: linear-gradient(135deg, #191a3d 0%, #0d0e23 100%);
-  color: #CBD3E1; /* Adjusted to a slightly lighter, more readable color */
+  /* Dark, nerdy gradient background: subtle navy/charcoal tones */
+  background: linear-gradient(135deg, #0B0C10 0%, #12151C 100%);
+  color: #D1D5DB; /* A cool, readable gray for body text */
   scroll-behavior: smooth;
 }
 
 h1, h2, h3 {
   font-weight: 700;
-  color: #00f3ff; /* More vibrant neon cyan for headings */
+  color: #00F3A0; /* Neon teal for headings to stand out */
 }
 
 p, li {
   line-height: 1.6em;
-  color: #CBD3E1; /* Paragraph text color adjusted to match the new scheme */
+  color: #D1D5DB; /* Keep paragraphs in a neutral, readable gray */
 }
 
 a {
-  color: #00fff2; /* Bright cyan for links */
+  color: #00F3A0; /* Links match heading accent color */
   text-decoration: none;
   transition: color 0.3s, border-bottom 0.3s;
   border-bottom: 1px solid transparent;
 }
 
 a:hover {
-  color: #39ff14; /* Neon green on hover */
-  border-bottom: 1px solid #39ff14;
+  color: #06D6A0; /* Slight variation on hover for a subtle interactive feel */
+  border-bottom: 1px solid #06D6A0;
 }
 
 a:focus {
-  outline: 2px solid #00f3ff; /* Outline matches heading color */
+  outline: 2px solid #00F3A0;
   outline-offset: 4px;
 }
 
@@ -41,8 +41,8 @@ a:focus {
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  background: #2E3440;
-  border-bottom: 1px solid #434C5E;
+  background: #1C1F2B; /* Slightly lighter dark background for the nav bar */
+  border-bottom: 1px solid #2E3440;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -51,7 +51,7 @@ a:focus {
 .nav-logo {
   font-size: 1.5em;
   font-weight: 700;
-  color: #00f3ff; /* Match heading color */
+  color: #00F3A0;
 }
 
 .nav-links {
@@ -63,6 +63,11 @@ a:focus {
 
 .nav-links li a {
   font-weight: 500;
+  color: #D1D5DB;
+}
+
+.nav-links li a:hover {
+  color: #06D6A0;
 }
 
 .nav-toggle {
@@ -70,7 +75,7 @@ a:focus {
   background: none;
   border: none;
   font-size: 1.5em;
-  color: #D8DEE9;
+  color: #D1D5DB;
 }
 
 /* Hero Section */
@@ -94,17 +99,17 @@ a:focus {
 .subheading {
   font-size: 1.2em;
   margin-bottom: 15px;
-  color: #E5E9F0;
+  color: #C7CBD3;
 }
 
 .location {
   margin-bottom: 20px;
-  color: #E5E9F0;
+  color: #C7CBD3;
 }
 
 .hero-button {
-  background: #00fff2; /* Button background changed to match link color */
-  color: #2E3440;
+  background: #00F3A0;
+  color: #12151C;
   padding: 15px 30px;
   text-decoration: none;
   font-weight: 500;
@@ -116,13 +121,13 @@ a:focus {
 }
 
 .hero-button:hover {
-  background: #00f3ff; /* On hover, matches heading color */
+  background: #06D6A0;
   transform: translateY(-2px);
 }
 
 .dots {
   display: inline-block;
-  margin-left: 5px; /* A little space after your name */
+  margin-left: 5px;
 }
 
 .dots span {
@@ -130,7 +135,7 @@ a:focus {
   animation: blink 1.5s infinite;
   display: inline-block;
   font-weight: bold;
-  color: #ECEFF4;
+  color: #D1D5DB;
   font-size: 1em;
 }
 
@@ -158,7 +163,6 @@ section {
   text-align: left;
 }
 
-/* About Section */
 .about-section {
   text-align: center;
 }
@@ -182,7 +186,7 @@ section {
   max-width: 600px;
   text-align: left;
   font-size: 1.05em;
-  color: #ECEFF4;
+  color: #D1D5DB;
 }
 
 /* Heading Icons */
@@ -196,7 +200,7 @@ section {
 
 /* Experience Section */
 .experience-section .experience-item {
-  background: #2E3440;
+  background: #1C1F2B;
   border-radius: 5px;
   padding: 20px;
   margin-bottom: 40px;
@@ -211,7 +215,7 @@ section {
 .experience-item h3 {
   font-size: 1.5em;
   margin-bottom: 10px;
-  color: #8FBCBB;
+  color: #00F3A0;
   display: flex;
   align-items: center;
 }
@@ -224,12 +228,12 @@ section {
 }
 
 .experience-item p, .experience-item li {
-  color: #ECEFF4;
+  color: #D1D5DB;
 }
 
 /* Cards (for Education, Skills, etc.) */
 .card {
-  background: #2E3440;
+  background: #1C1F2B;
   border-radius: 5px;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
@@ -249,7 +253,7 @@ section {
 }
 
 .project-card {
-  background: #2E3440;
+  background: #1C1F2B;
   border-radius: 5px;
   padding: 20px;
   text-align: left;
@@ -265,7 +269,7 @@ section {
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 1.3em;
-  color: #8FBCBB;
+  color: #00F3A0;
 }
 
 .project-date {
@@ -276,12 +280,12 @@ section {
 
 .project-card p {
   line-height: 1.6em;
-  color: #ECEFF4;
+  color: #D1D5DB;
 }
 
 /* Contact Section */
 .contact-section p a:hover {
-  border-bottom: 1px solid #00f3ff; /* Match heading and outline color */
+  border-bottom: 1px solid #06D6A0;
 }
 
 /* Icons */
@@ -298,9 +302,9 @@ footer {
   text-align: center;
   padding: 20px;
   font-size: 0.9em;
-  background: #2E3440;
-  border-top: 1px solid #434C5E;
-  color: #ECEFF4;
+  background: #1C1F2B;
+  border-top: 1px solid #2E3440;
+  color: #D1D5DB;
 }
 
 /* Responsive */
@@ -311,7 +315,7 @@ footer {
     position: absolute;
     top: 60px;
     right: 20px;
-    background: #2E3440;
+    background: #1C1F2B;
     padding: 20px;
     border-radius: 5px;
     display: none;
