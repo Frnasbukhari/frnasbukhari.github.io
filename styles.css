@@ -1,17 +1,31 @@
-/* CSS Variables for Consistent Styling */
+/* --------------------------------------- */
+/*            VARIABLES & BASICS           */
+/* --------------------------------------- */
 :root {
   --primary-color: #007BFF;
   --secondary-color: #0056b3;
   --background-color: #f7f7f7;
   --text-color: #333;
-  --card-background: white;
+  --card-background: #fff;
   --card-border: #ddd;
   --card-shadow: rgba(0, 0, 0, 0.1);
   --font-family: 'Inter', sans-serif;
   --transition-speed: 0.3s;
+
+  /* Title & Spacing Adjustments */
+  --block-title-size: 1.6rem; /* Smaller section titles */
+  --card-title-size: 1.1rem;  /* Smaller card titles */
+  --section-padding: 2rem;    /* Less section padding */
+  --card-margin-bottom: 1rem; /* Less space between cards */
+  --card-padding: 1.5rem;     /* Slightly less card padding */
+
+  /* Skill Icon Size (reduced) */
+  --skill-icon-size: 14px;
+
+  /* Star (skill-level) color */
+  --skill-star-color: #000; /* black stars */
 }
 
-/* General Styling */
 * {
   box-sizing: border-box;
 }
@@ -29,7 +43,6 @@ a {
   color: var(--primary-color);
   text-decoration: none;
 }
-
 a:hover,
 a:focus {
   text-decoration: underline;
@@ -39,15 +52,11 @@ h1, h2, h3 {
   margin: 0;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* Navigation Menu */
+/* --------------------------------------- */
+/*            NAVIGATION BAR               */
+/* --------------------------------------- */
 .navbar {
-  background: white;
+  background: #fff;
   border-bottom: 1px solid var(--card-border);
   position: sticky;
   top: 0;
@@ -120,13 +129,15 @@ ul {
   color: var(--primary-color);
 }
 
-/* Header Section */
+/* --------------------------------------- */
+/*             HEADER SECTION              */
+/* --------------------------------------- */
 .header-section {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 4rem 1rem;
-  background: white;
+  background: #fff;
 }
 
 .intro-container {
@@ -181,49 +192,56 @@ ul {
   height: 24px;
   transition: transform var(--transition-speed) ease-in-out;
 }
-
 .social-links li img:hover {
   transform: scale(1.1);
 }
 
-/* About Section */
-.about-section {
-  padding: 3rem 1rem;
+/* --------------------------------------- */
+/*             SECTIONS & TITLES           */
+/* --------------------------------------- */
+/* Less spacing between sections */
+section {
+  padding: var(--section-padding) 1rem;
   max-width: 900px;
   margin: auto;
   text-align: left;
 }
 
-.about-section p {
-  margin-bottom: 1.5rem;
-  text-align: justify;
-}
-
-/* Experience, Education, Projects, Skills - Section Titles Left-Aligned */
+/* Smaller, left-aligned block titles */
 .experience-section h2,
 .education-section h2,
 .projects-section h2,
 .skills-section h2 {
-  font-size: 2rem;        /* Adjust as needed */
-  margin-bottom: 1.5rem;
+  font-size: var(--block-title-size);
+  margin-bottom: 1rem;
   padding-left: 0.5rem;
-  text-align: left;       /* Left-aligned section titles */
+  text-align: left;
 }
 
-/* Card Styling (Experience, Education, Projects) */
+/* --------------------------------------- */
+/*             CARDS (Experience, etc.)    */
+/* --------------------------------------- */
 .card {
   background: var(--card-background);
   border: 1px solid var(--card-border);
-  border-radius: 12px;
-  padding: 2rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0px 4px 12px var(--card-shadow);
-  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  border-radius: 8px;
+  padding: var(--card-padding);
+  margin-bottom: var(--card-margin-bottom);
+  box-shadow: 0 4px 12px var(--card-shadow);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
+/* Smaller, black card titles */
+.card h3 {
+  display: flex;
+  align-items: center;
+  font-size: var(--card-title-size);
+  color: #000;
+  margin-bottom: 0.5rem;
 }
 
 .company-logo {
@@ -232,15 +250,6 @@ ul {
   margin-right: 10px;
   object-fit: contain;
   vertical-align: middle;
-}
-
-/* 1. Smaller & Black Card Titles */
-.card h3 {
-  display: flex;
-  align-items: center;
-  font-size: 1.2rem; /* Smaller than before */
-  color: #000;       /* Black text */
-  margin-bottom: 0.5rem;
 }
 
 .project-date {
@@ -253,20 +262,20 @@ ul {
   padding-left: 1.5rem;
   list-style: disc;
 }
-
 .card ul li {
   margin-bottom: 0.8rem;
 }
-
 .card p {
   margin-bottom: 1rem;
   font-size: 1rem;
   line-height: 1.6;
 }
 
-/* Skills Section */
+/* --------------------------------------- */
+/*             SKILLS SECTION             */
+/* --------------------------------------- */
 .skills-section {
-  padding: 3rem 1rem;
+  padding: var(--section-padding) 1rem;
   max-width: 1200px;
   margin: auto;
   background-color: #f9f9f9;
@@ -276,140 +285,126 @@ ul {
 .skills-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem; /* Less gap */
   justify-content: center;
 }
 
 .skill-category {
   flex: 1 1 250px;
-  background-color: #fff;
-  padding: 1.5rem;
-  border: 1px solid #ddd;
+  background: #fff;
+  padding: 1rem; /* Less padding */
+  border: 1px solid var(--card-border);
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px var(--card-shadow);
+  transition: box-shadow var(--transition-speed);
 }
 
-/* Skills Category Title */
+.skill-category:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Smaller black titles in Skills */
 .skill-category h3 {
-  font-size: 1.2rem; /* Also small for consistency in Skills category titles */
-  color: #000;       /* Black text for Skills titles */
+  font-size: var(--card-title-size);
+  color: #000;
+  margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
 }
 
-/* 2. Stars to be black */
-.skill-level {
-  color: #000 !important; /* Force black color for stars */
-  margin-left: 0.5rem;
-  font-size: 1rem;
-}
-
-/* Skill Icon - slightly smaller */
+/* Skill Icon and Stars */
 .skill-icon {
-  width: 14px; /* Smaller icons */
-  height: 14px;
+  width: var(--skill-icon-size);
+  height: var(--skill-icon-size);
   margin-right: 0.5rem;
   vertical-align: middle;
 }
 
-/* Remove default list styles in Skills */
+.skill-level {
+  color: var(--skill-star-color) !important; /* black stars */
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+
 .skill-category ul {
   list-style-type: none;
   padding: 0;
 }
-
-/* Skill Items */
 .skill-category ul li {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem; /* less spacing between skills */
   font-size: 1rem;
   color: #555;
   display: flex;
   align-items: center;
 }
-
 .skill-category ul li .skill-icon {
-  margin-right: 0.75rem;
+  margin-right: 0.5rem;
 }
-
 .skill-category ul li .skill-level {
   margin-left: auto;
 }
 
-/* Hover Effects (Optional) */
+/* Optional hover effect for skill items */
 .skill-category ul li:hover {
   color: var(--primary-color);
-  transition: color 0.3s ease;
+  transition: color var(--transition-speed) ease;
 }
-
 .skill-icon:hover {
   transform: scale(1.1);
-  transition: transform 0.3s ease;
+  transition: transform var(--transition-speed) ease;
 }
 
-/* Contact Section */
+/* --------------------------------------- */
+/*           CONTACT SECTION               */
+/* --------------------------------------- */
 .contact-section {
-  padding: 3rem 1rem;
+  padding: var(--section-padding) 1rem;
   max-width: 900px;
   margin: auto;
   text-align: center;
 }
 
 .contact-section h2 {
-  font-size: 2rem; /* You can adjust as needed */
-  margin-bottom: 1.5rem;
-}
-
-.contact-section p {
-  font-size: 1.2rem;
+  font-size: var(--block-title-size);
   margin-bottom: 1rem;
 }
-
+.contact-section p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
 .contact-section a {
   color: var(--primary-color);
   transition: color var(--transition-speed) ease-in-out;
 }
-
 .contact-section a:hover {
   color: var(--secondary-color);
 }
 
-/* Footer */
+/* --------------------------------------- */
+/*                FOOTER                   */
+/* --------------------------------------- */
 footer {
   text-align: center;
   padding: 1.5rem;
   background: #333;
-  color: white;
+  color: #fff;
   width: 100%;
   position: relative;
 }
 
-/* Responsive Design (Larger Screens) */
-@media (max-width: 1024px) {
-  .intro-container {
-    padding: 0 1rem;
-  }
-
-  .header-section {
-    padding: 3rem 1rem;
-  }
-
-  section {
-    padding: 2.5rem 1rem;
-  }
-}
-
-/* Responsive for Tablets and Below */
+/* --------------------------------------- */
+/*       RESPONSIVE MEDIA QUERIES         */
+/* --------------------------------------- */
+/* For Tablets & Below */
 @media (max-width: 768px) {
   .navbar-toggle {
     display: block;
   }
-
   .navbar-links {
     display: none;
     flex-direction: column;
     gap: 1rem;
-    background: white;
+    background: #fff;
     position: absolute;
     top: 60px;
     right: 1rem;
@@ -418,75 +413,63 @@ footer {
     border-radius: 8px;
     padding: 1rem;
   }
-
   .navbar-links.active {
     display: flex;
   }
-
   .intro-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 1rem;
   }
-
   .profile-pic {
     width: 120px;
     height: 120px;
   }
-
   .intro-text {
     max-width: 100%;
   }
-
-  section {
-    padding: 2rem 1rem;
-  }
-
   .company-logo {
     width: 30px;
     height: 30px;
   }
-
+  section {
+    padding: 1.5rem 1rem; /* Adjusted for smaller screens */
+  }
   h2 {
-    font-size: 1.75rem;
-    padding-left: 0;
+    font-size: 1.4rem; /* Slightly smaller on tablet */
+  }
+  .card h3,
+  .skill-category h3 {
+    font-size: 1rem; 
   }
 }
 
-/* Responsive for Mobile Screens */
+/* For Mobile Screens */
 @media (max-width: 480px) {
   .intro-container {
     padding: 0 1rem;
   }
-
   .profile-pic {
     width: 100px;
     height: 100px;
   }
-
   .navbar-container {
     padding: 0.5rem;
   }
-
   .navbar-brand {
     font-size: 1.25rem;
   }
-
   .navbar-links {
     width: 150px;
   }
-
   h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
-
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem; /* Even smaller for mobile */
   }
-
-  /* Ensure smaller titles for Skills category as well */
-  .skills-section .skill-category h3 {
-    font-size: 1rem;
+  .skill-category h3 {
+    font-size: 0.9rem; 
   }
 }
