@@ -277,17 +277,6 @@ ul {
   line-height: 1.6;
 }
 
-/* Skills Section */
-.skills-section ul {
-  padding-left: 1.5rem;
-  list-style: disc;
-}
-
-.skills-section li {
-  margin-bottom: 0.8rem;
-  font-size: 1rem;
-}
-
 /* Skills Section Styling */
 .skills-section {
   padding: 3rem 1rem;
@@ -329,8 +318,8 @@ ul {
 }
 
 .skill-icon {
-  width: 24px;
-  height: 24px;
+  width: 16px; /* Adjusted size */
+  height: 16px; /* Adjusted size */
   margin-right: 0.5rem;
   vertical-align: middle;
 }
@@ -388,7 +377,6 @@ ul {
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
-
 
 /* Contact Section */
 .contact-section {
