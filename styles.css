@@ -288,6 +288,108 @@ ul {
   font-size: 1rem;
 }
 
+/* Skills Section Styling */
+.skills-section {
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+}
+
+.skills-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.skill-category {
+  flex: 1 1 250px;
+  background-color: #fff;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill-category h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #007BFF;
+  display: flex;
+  align-items: center;
+}
+
+.skill-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.skill-level {
+  color: #FFD700; /* Gold color for stars */
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Remove default list styles */
+.skill-category ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style individual skill items */
+.skill-category ul li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+}
+
+/* Ensure icons and text align properly */
+.skill-category ul li .skill-icon {
+  margin-right: 0.75rem;
+}
+
+.skill-category ul li .skill-level {
+  margin-left: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-category {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+/* Optional: Hover Effects for Interactivity */
+.skill-category ul li:hover {
+  color: #007BFF;
+  transition: color 0.3s ease;
+}
+
+.skill-icon:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+
 /* Contact Section */
 .contact-section {
   padding: 3rem 1rem;
