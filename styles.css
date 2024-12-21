@@ -13,20 +13,20 @@
   --transition-speed: 0.3s;
 
   /* Title & Spacing Adjustments */
-  --block-title-size: 1.6rem; /* Section titles size */
-  --card-title-size: 1.1rem;  /* Card titles size */
+  --block-title-size: 1.6rem; /* Section titles (Experience, Education, etc.) */
+  --card-title-size: 1.1rem;  /* Card h3 titles */
   --section-padding: 2rem;    /* Less section padding */
   --card-margin-bottom: 1rem; /* Less space between cards */
   --card-padding: 1.5rem;     /* Slightly less card padding */
 
-  /* Skill Icon Size (reduced) */
+  /* Skill Icon & Star Colors */
   --skill-icon-size: 14px;
+  --skill-star-color: #000;   /* black stars */
 
-  /* Star color for skill-level */
-  --skill-star-color: #000; /* black stars */
-
-  /* NEW: Card Text Size for paragraphs, lists, etc. */
-  --card-text-size: 0.9rem;  
+  /* NEW: For even smaller text inside cards and header intro */
+  --intro-name-size: 2rem;    /* Smaller name (h1) in header */
+  --intro-text-size: 1rem;    /* Smaller intro paragraph text */
+  --card-body-size: 0.8rem;   /* Even smaller card body text */
 }
 
 * {
@@ -119,7 +119,7 @@ h1, h2, h3 {
 }
 
 .navbar-links li {
-  list-style: none; /* Remove any bullets from nav items */
+  list-style: none; /* remove nav bullets */
 }
 .navbar-links li a {
   font-size: 1rem;
@@ -162,16 +162,18 @@ h1, h2, h3 {
   object-fit: cover;
 }
 
+/* Smaller name & intro text */
 .intro-text {
   max-width: 600px;
 }
-
 .intro-text h1 {
-  font-size: 2.5rem;
+  font-size: var(--intro-name-size);
   margin-bottom: 0.5rem;
 }
 .intro-text p {
   margin-bottom: 1rem;
+  font-size: var(--intro-text-size);
+  line-height: 1.4;
 }
 
 /* Centered social links + no bullets */
@@ -180,11 +182,11 @@ h1, h2, h3 {
   gap: 1rem;
   justify-content: center;
   margin-top: 1rem;
-  list-style: none;    /* Remove bullets */
+  list-style: none;  /* remove bullets */
   padding: 0;
 }
 .social-links li {
-  list-style: none;    /* Double check no bullets */
+  list-style: none;  /* double-check no bullets */
 }
 .social-links li img {
   width: 24px;
@@ -233,23 +235,13 @@ section {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* 1) Smaller, black card titles;
-   2) Also reduce text inside the cards 
-*/
+/* Card Titles: smaller, black */
 .card h3 {
   display: flex;
   align-items: center;
-  font-size: var(--card-title-size); /* For h3 specifically */
+  font-size: var(--card-title-size);
   color: #000;
   margin-bottom: 0.5rem;
-}
-
-/* Smaller text for paragraph, lists, project-date inside cards */
-.card p,
-.card ul li,
-.card .project-date {
-  font-size: var(--card-text-size);
-  line-height: 1.4; /* Slightly tighter spacing */
 }
 
 .company-logo {
@@ -260,20 +252,22 @@ section {
   vertical-align: middle;
 }
 
-/* If you prefer separate control for .project-date:
-.project-date {
-  font-size: var(--card-text-size);
-  color: #888;
+/* Smaller text in card body */
+.card .project-date,
+.card p,
+.card ul li {
+  font-size: var(--card-body-size);
+  line-height: 1.4; /* Slightly tighter line spacing */
+  color: var(--text-color);
 }
-*/
 
-/* Lists inside cards */
+/* Card Lists */
 .card ul {
   padding-left: 1.5rem;
   list-style: disc;
 }
 .card ul li {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.6rem; /* Slightly less spacing between list items */
 }
 
 /* --------------------------------------- */
@@ -446,6 +440,11 @@ footer {
   .skill-category h3 {
     font-size: 1rem; 
   }
+  /* If you want the card text even smaller on tablets:
+     .card p, .card ul li, .card .project-date {
+       font-size: 0.75rem;
+     }
+  */
 }
 
 /* For Mobile Screens */
@@ -467,12 +466,17 @@ footer {
     width: 150px;
   }
   h1 {
-    font-size: 1.8rem;
+    font-size: 1.8rem;  /* Smaller name on mobile */
   }
   h2 {
-    font-size: 1.3rem; /* Even smaller for mobile */
+    font-size: 1.3rem;  /* Even smaller for mobile section titles */
   }
   .skill-category h3 {
     font-size: 0.9rem; 
   }
+  /* Optionally reduce card body text further on mobile:
+     .card p, .card ul li, .card .project-date {
+       font-size: 0.7rem;
+     }
+  */
 }
