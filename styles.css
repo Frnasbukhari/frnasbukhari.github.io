@@ -84,6 +84,19 @@ h2 {
   border-radius: 5px;
 }
 
+.company-logo {
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
 footer {
   text-align: center;
   padding: 1rem;
