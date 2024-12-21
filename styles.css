@@ -9,6 +9,15 @@
   --card-shadow: rgba(0, 0, 0, 0.1);
   --font-family: 'Inter', sans-serif;
   --transition-speed: 0.3s;
+  
+  /* New Variables for Title Sizes */
+  --h2-font-size: 1.8rem; /* Reduced from 2rem */
+  --h3-font-size: 1.3rem; /* Reduced from 1.5rem */
+  --skills-h3-font-size: 1.2rem; /* Further reduced for Skills section */
+  --skills-h3-color: #000; /* Black color for Skills section titles */
+  
+  /* New Variable for Skill Icon Size */
+  --skill-icon-size: 14px; /* Reduced from 16px */
 }
 
 /* General Styling */
@@ -39,10 +48,18 @@ h1, h2, h3 {
   margin: 0;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* Adjusted Font Sizes for h2 and h3 */
+h2 {
+  font-size: var(--h2-font-size); /* Reduced size */
+  margin-bottom: 1.5rem; /* Consistent spacing */
+  color: var(--text-color); /* Ensures consistent color */
+  text-align: center; /* Maintains center alignment */
+}
+
+h3 {
+  font-size: var(--h3-font-size); /* Reduced size */
+  margin-bottom: 1rem; /* Consistent spacing */
+  color: #007BFF; /* Original blue color */
 }
 
 /* Navigation Menu */
@@ -195,9 +212,8 @@ ul {
 }
 
 .about-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  padding-left: 0.5rem;
+  /* Already adjusted globally */
+  /* font-size: 2rem; */ /* Removed redundant */
 }
 
 .about-section p {
@@ -220,9 +236,8 @@ ul {
 .education-section h2,
 .skills-section h2,
 .projects-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  padding-left: 0.5rem;
+  /* Already adjusted globally */
+  /* font-size: 2rem; */ /* Removed redundant */
 }
 
 /* Cards for Experience, Education, and Projects */
@@ -252,7 +267,7 @@ ul {
 .card h3 {
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.3rem; /* Reduced from 1.5rem */
   margin-bottom: 0.5rem;
 }
 
@@ -287,11 +302,16 @@ ul {
 }
 
 .skills-section h2 {
-  font-size: 2.5rem;
+  font-size: 2.5rem; /* Will be adjusted below */
   margin-bottom: 2rem;
   text-align: center;
   color: #333;
 }
+
+/* Adjusted globally in h2 */
+/* .skills-section h2 { */
+/*   font-size: var(--h2-font-size); */ /* Changed globally */
+/* } */
 
 .skills-container {
   display: flex;
@@ -310,16 +330,16 @@ ul {
 }
 
 .skill-category h3 {
-  font-size: 1.5rem;
+  font-size: var(--skills-h3-font-size); /* Reduced from 1.5rem to 1.2rem */
   margin-bottom: 1rem;
-  color: #007BFF;
+  color: var(--skills-h3-color); /* Changed to black */
   display: flex;
   align-items: center;
 }
 
 .skill-icon {
-  width: 16px; /* Adjusted size */
-  height: 16px; /* Adjusted size */
+  width: var(--skill-icon-size); /* Reduced size from 16px to 14px */
+  height: var(--skill-icon-size); /* Reduced size from 16px to 14px */
   margin-right: 0.5rem;
   vertical-align: middle;
 }
@@ -365,6 +385,55 @@ ul {
     width: 100%;
     max-width: 600px;
   }
+
+  /* Adjust font sizes for smaller screens */
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  .skills-section .skill-category h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-container {
+    padding: 0 1rem;
+  }
+
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+
+  .navbar-container {
+    padding: 0.5rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+
+  .navbar-links {
+    width: 150px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Ensure skills-section h3 is appropriately sized */
+  .skills-section .skill-category h3 {
+    font-size: 1rem;
+  }
 }
 
 /* Optional: Hover Effects for Interactivity */
@@ -387,8 +456,7 @@ ul {
 }
 
 .contact-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+  /* Already adjusted globally */
 }
 
 .contact-section p {
@@ -415,7 +483,7 @@ footer {
   position: relative;
 }
 
-/* Responsive Design */
+/* Responsive Design Adjustments for Larger Screens */
 @media (max-width: 1024px) {
   .intro-container {
     padding: 0 1rem;
@@ -430,6 +498,7 @@ footer {
   }
 }
 
+/* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
   .navbar-toggle {
     display: block;
@@ -512,5 +581,9 @@ footer {
 
   h2 {
     font-size: 1.5rem;
+  }
+
+  .skills-section .skill-category h3 {
+    font-size: 1rem;
   }
 }
