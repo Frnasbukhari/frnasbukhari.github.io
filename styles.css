@@ -1,25 +1,123 @@
+/* CSS Variables for Consistent Styling */
+:root {
+  --primary-color: #007BFF;
+  --secondary-color: #0056b3;
+  --background-color: #f7f7f7;
+  --text-color: #333;
+  --card-background: white;
+  --card-border: #ddd;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --font-family: 'Inter', sans-serif;
+  --transition-speed: 0.3s;
+}
+
 /* General Styling */
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-family);
   margin: 0;
   padding: 0;
-  color: #333;
-  background: #f7f7f7;
+  color: var(--text-color);
+  background: var(--background-color);
+  line-height: 1.6;
 }
 
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  text-align: left; /* Align titles to the left */
-  padding-left: 1.5rem; /* Add slight padding for alignment */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
 }
 
-/* Center Content */
-section {
-  padding: 3rem 5rem;
-  max-width: 900px; /* Compress content width to the center */
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Navigation Menu */
+.navbar {
+  background: white;
+  border-bottom: 1px solid var(--card-border);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
   margin: auto;
-  text-align: left; /* Ensure all content aligns left */
+  padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-color);
+  display: block;
+  position: relative;
+  transition: all var(--transition-speed) ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  top: 8px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links li a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+  transition: color var(--transition-speed) ease-in-out;
+}
+
+.navbar-links li a:hover,
+.navbar-links li a.active {
+  color: var(--primary-color);
 }
 
 /* Header Section */
@@ -27,22 +125,22 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 5rem;
+  padding: 4rem 1rem;
   background: white;
-  border-bottom: 1px solid #ddd;
 }
 
 .intro-container {
   display: flex;
   align-items: center;
   gap: 2rem;
-  max-width: 900px; /* Align with the compressed center width */
+  max-width: 1200px;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .profile-pic {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -53,7 +151,7 @@ section {
 
 .intro-text h1 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .intro-text .location {
@@ -63,24 +161,25 @@ section {
   margin-bottom: 1rem;
 }
 
+.intro-text .icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+}
+
 .intro-text p {
-  line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
 .social-links {
   display: flex;
   gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.social-links li {
-  list-style: none;
 }
 
 .social-links li img {
   width: 24px;
   height: 24px;
-  transition: transform 0.2s;
+  transition: transform var(--transition-speed) ease-in-out;
 }
 
 .social-links li img:hover {
@@ -88,38 +187,71 @@ section {
 }
 
 /* About Section */
+.about-section {
+  padding: 3rem 1rem;
+  max-width: 900px;
+  margin: auto;
+  text-align: left;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  padding-left: 0.5rem;
+}
+
 .about-section p {
-  line-height: 1.8;
   margin-bottom: 1.5rem;
   text-align: justify;
 }
 
-/* Experience, Education, and Skills Section */
+/* Experience, Education, and Skills Sections */
 .experience-section,
 .education-section,
-.skills-section {
-  margin-top: 2rem;
+.skills-section,
+.projects-section {
+  padding: 3rem 1rem;
+  max-width: 900px;
+  margin: auto;
+  text-align: left;
 }
 
-.experience-card,
-.education-card {
-  background: white;
-  border: 1px solid #ddd;
+.experience-section h2,
+.education-section h2,
+.skills-section h2,
+.projects-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  padding-left: 0.5rem;
+}
+
+/* Cards for Experience, Education, and Projects */
+.card {
+  background: var(--card-background);
+  border: 1px solid var(--card-border);
   border-radius: 12px;
   padding: 2rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 12px var(--card-shadow);
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 }
 
-.experience-card:hover,
-.education-card:hover {
+.card:hover {
   transform: translateY(-5px);
   box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-.experience-card h3,
-.education-card h3 {
+.company-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.card h3 {
+  display: flex;
+  align-items: center;
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
@@ -130,24 +262,19 @@ section {
   margin-bottom: 1rem;
 }
 
-.experience-card ul,
-.education-card ul {
+.card ul {
   padding-left: 1.5rem;
   list-style: disc;
 }
 
-.experience-card ul li,
-.education-card ul li {
+.card ul li {
   margin-bottom: 0.8rem;
 }
 
-/* Logos and Icons */
-.company-logo {
-  width: 40px; /* Fixed width */
-  height: 40px; /* Fixed height */
-  margin-right: 10px; /* Space between logo and text */
-  object-fit: contain;
-  vertical-align: middle;
+.card p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 /* Skills Section */
@@ -161,79 +288,31 @@ section {
   font-size: 1rem;
 }
 
-/* Projects Section */
-.projects-section {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.project-card {
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
-}
-
-.project-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.project-date {
-  font-size: 0.9rem;
-  color: #888;
-  margin-bottom: 1rem;
-}
-
-.project-tools {
-  font-size: 0.9rem;
-  margin-bottom: 1.5rem;
-}
-
-.project-card p {
-  line-height: 1.6;
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.view-details-btn {
-  padding: 0.7rem 1.5rem;
-  background: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.view-details-btn:hover {
-  background-color: #0056b3;
-}
-
 /* Contact Section */
-.contact-section p {
+.contact-section {
+  padding: 3rem 1rem;
+  max-width: 900px;
+  margin: auto;
   text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-section p {
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
 
 .contact-section a {
-  color: #007BFF;
-  text-decoration: none;
+  color: var(--primary-color);
+  transition: color var(--transition-speed) ease-in-out;
 }
 
 .contact-section a:hover {
-  text-decoration: underline;
+  color: var(--secondary-color);
 }
 
 /* Footer */
@@ -244,38 +323,104 @@ footer {
   color: white;
   width: 100%;
   position: relative;
-  bottom: 0;
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .intro-container {
+    padding: 0 1rem;
+  }
+
   .header-section {
+    padding: 3rem 1rem;
+  }
+
+  section {
+    padding: 2.5rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
     flex-direction: column;
-    text-align: center;
-    padding: 2rem;
+    gap: 1rem;
+    background: white;
+    position: absolute;
+    top: 60px;
+    right: 1rem;
+    width: 200px;
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
   }
 
   .intro-container {
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     gap: 1rem;
   }
 
-  .intro-text h1 {
-    font-size: 2rem;
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  .intro-text {
+    max-width: 100%;
   }
 
   section {
-    padding: 2rem;
-  }
-
-  .project-card,
-  .experience-card,
-  .education-card {
-    padding: 1.5rem;
+    padding: 2rem 1rem;
   }
 
   .company-logo {
     width: 30px;
-    height: 30px; /* Smaller fixed sizes for smaller screens */
+    height: 30px;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-container {
+    padding: 0 1rem;
+  }
+
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+
+  .navbar-container {
+    padding: 0.5rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+
+  .navbar-links {
+    width: 150px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
   }
 }
