@@ -13,8 +13,8 @@
   --transition-speed: 0.3s;
 
   /* Title & Spacing Adjustments */
-  --block-title-size: 1.6rem; /* Smaller section titles */
-  --card-title-size: 1.1rem;  /* Smaller card titles */
+  --block-title-size: 1.6rem; /* Section titles size */
+  --card-title-size: 1.1rem;  /* Card titles size */
   --section-padding: 2rem;    /* Less section padding */
   --card-margin-bottom: 1rem; /* Less space between cards */
   --card-padding: 1.5rem;     /* Slightly less card padding */
@@ -24,6 +24,9 @@
 
   /* Star color for skill-level */
   --skill-star-color: #000; /* black stars */
+
+  /* NEW: Card Text Size for paragraphs, lists, etc. */
+  --card-text-size: 0.9rem;  
 }
 
 * {
@@ -115,6 +118,9 @@ h1, h2, h3 {
   gap: 1.5rem;
 }
 
+.navbar-links li {
+  list-style: none; /* Remove any bullets from nav items */
+}
 .navbar-links li a {
   font-size: 1rem;
   font-weight: 500;
@@ -137,7 +143,7 @@ h1, h2, h3 {
   background: #fff;
 }
 
-/* Intro Container & Centered Social Links */
+/* Center everything in the header */
 .intro-container {
   display: flex;
   align-items: center;
@@ -145,8 +151,8 @@ h1, h2, h3 {
   gap: 2rem;
   max-width: 1200px;
   width: 100%;
-  text-align: center; /* Center the text & links */
-  justify-content: center; /* Center the blocks horizontally */
+  text-align: center;
+  justify-content: center;
 }
 
 .profile-pic {
@@ -160,7 +166,6 @@ h1, h2, h3 {
   max-width: 600px;
 }
 
-/* Big name + short intro text */
 .intro-text h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
@@ -169,12 +174,17 @@ h1, h2, h3 {
   margin-bottom: 1rem;
 }
 
-/* Centered social links with spacing */
+/* Centered social links + no bullets */
 .social-links {
   display: flex;
   gap: 1rem;
   justify-content: center;
   margin-top: 1rem;
+  list-style: none;    /* Remove bullets */
+  padding: 0;
+}
+.social-links li {
+  list-style: none;    /* Double check no bullets */
 }
 .social-links li img {
   width: 24px;
@@ -184,15 +194,6 @@ h1, h2, h3 {
 .social-links li img:hover {
   transform: scale(1.1);
 }
-
-/* --------------------------------------- */
-/*         REMOVING ABOUT SECTION          */
-/* --------------------------------------- */
-/* If you just want it hidden instead of deleted:
-   .about-section {
-     display: none;
-   }
-*/
 
 /* --------------------------------------- */
 /*             SECTIONS & TITLES           */
@@ -232,13 +233,23 @@ section {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* Smaller, black card titles */
+/* 1) Smaller, black card titles;
+   2) Also reduce text inside the cards 
+*/
 .card h3 {
   display: flex;
   align-items: center;
-  font-size: var(--card-title-size);
+  font-size: var(--card-title-size); /* For h3 specifically */
   color: #000;
   margin-bottom: 0.5rem;
+}
+
+/* Smaller text for paragraph, lists, project-date inside cards */
+.card p,
+.card ul li,
+.card .project-date {
+  font-size: var(--card-text-size);
+  line-height: 1.4; /* Slightly tighter spacing */
 }
 
 .company-logo {
@@ -249,22 +260,20 @@ section {
   vertical-align: middle;
 }
 
+/* If you prefer separate control for .project-date:
 .project-date {
-  font-size: 0.9rem;
+  font-size: var(--card-text-size);
   color: #888;
-  margin-bottom: 1rem;
 }
+*/
+
+/* Lists inside cards */
 .card ul {
   padding-left: 1.5rem;
   list-style: disc;
 }
 .card ul li {
   margin-bottom: 0.8rem;
-}
-.card p {
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  line-height: 1.6;
 }
 
 /* --------------------------------------- */
@@ -285,7 +294,6 @@ section {
   justify-content: center;
 }
 
-/* skill cards */
 .skill-category {
   flex: 1 1 250px;
   background: #fff;
@@ -299,7 +307,7 @@ section {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* Smaller, black titles in Skills */
+/* Smaller, black skill titles */
 .skill-category h3 {
   font-size: var(--card-title-size);
   color: #000;
