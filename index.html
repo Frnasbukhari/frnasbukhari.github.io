@@ -1,34 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Meta Tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Frnas Bukhari - Portfolio</title>
   <meta name="description" content="Portfolio of Frnas Bukhari, an AI & Computer Science student specializing in business intelligence, data analysis, and innovation.">
-  <link rel="stylesheet" href="styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/headshot.png">
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Navigation Menu -->
+  <nav class="navbar" role="navigation">
+    <div class="navbar-container">
+      <a href="#" class="navbar-brand">Frnas Bukhari</a>
+      <button class="navbar-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="navbar-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <!-- Header Section -->
-  <header class="header-section">
+  <header class="header-section" role="banner">
     <div class="intro-container">
       <div class="intro-text">
         <h1>Frnas Bukhari</h1>
         <p class="location">
-          <img src="icons/location.svg" alt="Location Icon" class="icon"> Birmingham, UK & Jeddah, KSA
+          <img src="icons/location.svg" alt="" class="icon" aria-hidden="true"> Birmingham, UK & Jeddah, KSA
         </p>
         <p>
           Final-year AI & Computer Science student specializing in innovation, business intelligence, and data analysis.
         </p>
         <ul class="social-links">
-          <li><a href="https://www.linkedin.com/in/frnas" target="_blank"><img src="icons/linkedin.svg" alt="LinkedIn Icon" class="icon"></a></li>
-          <li><a href="mailto:fernas-2002@hotmail.com"><img src="icons/email.svg" alt="Email Icon" class="icon"></a></li>
-          <li><a href="https://github.com/frnas" target="_blank"><img src="icons/github.svg" alt="GitHub Icon" class="icon"></a></li>
+          <li><a href="https://www.linkedin.com/in/frnas" target="_blank" rel="noopener"><img src="icons/linkedin.svg" alt="LinkedIn" class="icon"></a></li>
+          <li><a href="mailto:fernas-2002@hotmail.com"><img src="icons/email.svg" alt="Email" class="icon"></a></li>
+          <li><a href="https://github.com/frnas" target="_blank" rel="noopener"><img src="icons/github.svg" alt="GitHub" class="icon"></a></li>
         </ul>
       </div>
-      <img src="images/headshot.png" alt="Frnas Bukhari" class="profile-pic">
+      <img src="images/headshot.png" alt="Frnas Bukhari" class="profile-pic" loading="lazy">
     </div>
   </header>
 
@@ -48,8 +73,8 @@
     <!-- Experience Section -->
     <section id="experience" class="experience-section">
       <h2>Experience</h2>
-      <div class="experience-card">
-        <h3><img src="images/nahda-logo.png" alt="Nahda Logo" class="company-logo"> President - Nahda Club</h3>
+      <div class="card experience-card">
+        <h3><img src="images/nahda-logo.png" alt="Nahda Club Logo" class="company-logo"> President - Nahda Club</h3>
         <p class="project-date">Sep 2024 – Present</p>
         <p><strong>Tools:</strong> Leadership, Event Management, Team Building</p>
         <ul>
@@ -58,8 +83,8 @@
           <li>Implemented a collaborative flat team structure to foster ownership and teamwork.</li>
         </ul>
       </div>
-      <div class="experience-card">
-        <h3><img src="images/pg-logo.png" alt="P&G Logo" class="company-logo"> Sales IT Intern - Procter & Gamble</h3>
+      <div class="card experience-card">
+        <h3><img src="images/pg-logo.png" alt="Procter & Gamble Logo" class="company-logo"> Sales IT Intern - Procter & Gamble</h3>
         <p class="project-date">Jul 2024 – Sep 2024</p>
         <p><strong>Tools:</strong> Python, Power BI, Data Automation</p>
         <ul>
@@ -67,7 +92,7 @@
           <li>Designed interactive Power BI dashboards, enabling real-time decision-making for leadership teams.</li>
         </ul>
       </div>
-      <div class="experience-card">
+      <div class="card experience-card">
         <h3><img src="images/pwc-logo.png" alt="PwC Logo" class="company-logo"> Emerging Technologies Lab Intern - PwC</h3>
         <p class="project-date">Jul 2023 – Aug 2023</p>
         <p><strong>Tools:</strong> Python, OpenCV, NumPy, ChatGPT</p>
@@ -81,7 +106,7 @@
     <!-- Education Section -->
     <section id="education" class="education-section">
       <h2>Education</h2>
-      <div class="education-card">
+      <div class="card education-card">
         <h3><img src="images/univ-logo.png" alt="University of Birmingham Logo" class="company-logo"> University of Birmingham</h3>
         <p class="project-date">BSc Artificial Intelligence & Computer Science (2021 – 2025)</p>
         <ul>
@@ -94,40 +119,39 @@
     <!-- Projects Section -->
     <section id="projects" class="projects-section">
       <h2>Projects</h2>
-      <div class="project-card">
-        <h3>Leveraging LLMs in Sentiment Analysis</h3>
+      <div class="card project-card">
+        <h3><img src="images/univ-logo.png" alt="Project 1 Logo" class="company-logo"> Leveraging LLMs in Sentiment Analysis</h3>
         <p class="project-date">June 2024 – Present</p>
         <p><strong>Tools:</strong> Python, Llama, VADER, BERT, Power BI</p>
         <p>
           Developed an AI-powered framework to analyze guest feedback for hotels, offering actionable insights to improve customer satisfaction and brand reputation.
         </p>
       </div>
-      <div class="project-card">
-        <h3>Glow Brush: Gamified Smart Toothbrush</h3>
+      <div class="card project-card">
+        <h3><img src="images/univ-logo.png" alt="Project 2 Logo" class="company-logo"> Glow Brush: Gamified Smart Toothbrush</h3>
         <p class="project-date">May 2024 – Aug 2024</p>
-        <p><strong>Tools:</strong> Swift, iOS Development, HCI</p>
+        <p><strong>Tools:</strong> Figma, Usability Evaluation, HCI</p>
         <p>
           Built a gamified toothbrush app that engages children by rewarding good oral hygiene habits, utilizing HCI techniques and user-friendly design principles.
         </p>
       </div>
-      <div class="project-card">
-        <h3>Commercial Data Transformation</h3>
+      <div class="card project-card">
+        <h3><img src="images/pg-logo.png" alt="Project 3 Logo" class="company-logo"> Commercial Data Transformation</h3>
         <p class="project-date">Jul 2024 – Sep 2024</p>
-        <p><strong>Tools:</strong> Python, Automation, Data Integration</p>
+        <p><strong>Tools:</strong> Power BI, Automation, Data Integration</p>
         <p>
           Led a global initiative to streamline commercial data processes by automating manual mappings and integrating multiple data sources.
         </p>
       </div>
-      <div class="project-card">
-        <h3>Sticky-Notes Image Generator Prototype (PwC)</h3>
+      <div class="card project-card">
+        <h3><img src="images/pwc-logo.png" alt="Project 4 Logo" class="company-logo"> Sticky-Notes Image Generator Prototype (PwC)</h3>
         <p class="project-date">Jul 2023 – Aug 2023</p>
-        <p><strong>Tools:</strong> ChatGPT, OpenCV, NumPy</p>
+        <p><strong>Tools:</strong> GPT & Dall-E API, Python, OpenCV, NumPy</p>
         <p>
           Enhanced an AI-powered system to process sticky note text into meaningful images by integrating ChatGPT for keyword extraction and optimization.
         </p>
       </div>
     </section>
-
 
     <!-- Skills Section -->
     <section id="skills" class="skills-section">
@@ -139,20 +163,20 @@
       </ul>
     </section>
 
-    
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:fernas-2002@hotmail.com">fernas-2002@hotmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/frnas" target="_blank">Connect with me</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/frnas" target="_blank" rel="noopener">Connect with me</a></p>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer>
+  <footer role="contentinfo">
     <p>&copy; <span id="year"></span> Frnas Bukhari. All Rights Reserved.</p>
   </footer>
 
+  <!-- JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
