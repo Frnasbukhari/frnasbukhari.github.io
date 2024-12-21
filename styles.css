@@ -22,7 +22,7 @@
   /* Skill Icon Size (reduced) */
   --skill-icon-size: 14px;
 
-  /* Star (skill-level) color */
+  /* Star color for skill-level */
   --skill-star-color: #000; /* black stars */
 }
 
@@ -103,11 +103,9 @@ h1, h2, h3 {
   position: absolute;
   left: 0;
 }
-
 .hamburger::before {
   top: -8px;
 }
-
 .hamburger::after {
   top: 8px;
 }
@@ -123,7 +121,6 @@ h1, h2, h3 {
   color: var(--text-color);
   transition: color var(--transition-speed) ease-in-out;
 }
-
 .navbar-links li a:hover,
 .navbar-links li a.active {
   color: var(--primary-color);
@@ -140,13 +137,16 @@ h1, h2, h3 {
   background: #fff;
 }
 
+/* Intro Container & Centered Social Links */
 .intro-container {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 2rem;
   max-width: 1200px;
   width: 100%;
-  flex-wrap: wrap;
+  text-align: center; /* Center the text & links */
+  justify-content: center; /* Center the blocks horizontally */
 }
 
 .profile-pic {
@@ -160,33 +160,22 @@ h1, h2, h3 {
   max-width: 600px;
 }
 
+/* Big name + short intro text */
 .intro-text h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
-
-.intro-text .location {
-  display: flex;
-  align-items: center;
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-}
-
-.intro-text .icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 0.5rem;
-}
-
 .intro-text p {
   margin-bottom: 1rem;
 }
 
+/* Centered social links with spacing */
 .social-links {
   display: flex;
   gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
 }
-
 .social-links li img {
   width: 24px;
   height: 24px;
@@ -197,9 +186,17 @@ h1, h2, h3 {
 }
 
 /* --------------------------------------- */
+/*         REMOVING ABOUT SECTION          */
+/* --------------------------------------- */
+/* If you just want it hidden instead of deleted:
+   .about-section {
+     display: none;
+   }
+*/
+
+/* --------------------------------------- */
 /*             SECTIONS & TITLES           */
 /* --------------------------------------- */
-/* Less spacing between sections */
 section {
   padding: var(--section-padding) 1rem;
   max-width: 900px;
@@ -219,7 +216,7 @@ section {
 }
 
 /* --------------------------------------- */
-/*             CARDS (Experience, etc.)    */
+/*             CARDS (Experience,etc.)     */
 /* --------------------------------------- */
 .card {
   background: var(--card-background);
@@ -257,7 +254,6 @@ section {
   color: #888;
   margin-bottom: 1rem;
 }
-
 .card ul {
   padding-left: 1.5rem;
   list-style: disc;
@@ -285,25 +281,25 @@ section {
 .skills-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem; /* Less gap */
+  gap: 1rem;
   justify-content: center;
 }
 
+/* skill cards */
 .skill-category {
   flex: 1 1 250px;
   background: #fff;
-  padding: 1rem; /* Less padding */
+  padding: 1rem;
   border: 1px solid var(--card-border);
   border-radius: 8px;
   box-shadow: 0 2px 8px var(--card-shadow);
   transition: box-shadow var(--transition-speed);
 }
-
 .skill-category:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* Smaller black titles in Skills */
+/* Smaller, black titles in Skills */
 .skill-category h3 {
   font-size: var(--card-title-size);
   color: #000;
@@ -312,7 +308,7 @@ section {
   align-items: center;
 }
 
-/* Skill Icon and Stars */
+/* Skill Icons & black stars */
 .skill-icon {
   width: var(--skill-icon-size);
   height: var(--skill-icon-size);
@@ -321,7 +317,7 @@ section {
 }
 
 .skill-level {
-  color: var(--skill-star-color) !important; /* black stars */
+  color: var(--skill-star-color) !important;
   margin-left: 0.5rem;
   font-size: 1rem;
 }
@@ -331,7 +327,7 @@ section {
   padding: 0;
 }
 .skill-category ul li {
-  margin-bottom: 0.5rem; /* less spacing between skills */
+  margin-bottom: 0.5rem;
   font-size: 1rem;
   color: #555;
   display: flex;
@@ -355,7 +351,7 @@ section {
 }
 
 /* --------------------------------------- */
-/*           CONTACT SECTION               */
+/*            CONTACT SECTION              */
 /* --------------------------------------- */
 .contact-section {
   padding: var(--section-padding) 1rem;
@@ -363,7 +359,6 @@ section {
   margin: auto;
   text-align: center;
 }
-
 .contact-section h2 {
   font-size: var(--block-title-size);
   margin-bottom: 1rem;
@@ -416,6 +411,7 @@ footer {
   .navbar-links.active {
     display: flex;
   }
+
   .intro-container {
     flex-direction: column;
     align-items: center;
@@ -426,15 +422,14 @@ footer {
     width: 120px;
     height: 120px;
   }
-  .intro-text {
-    max-width: 100%;
-  }
+
   .company-logo {
     width: 30px;
     height: 30px;
   }
+
   section {
-    padding: 1.5rem 1rem; /* Adjusted for smaller screens */
+    padding: 1.5rem 1rem;
   }
   h2 {
     font-size: 1.4rem; /* Slightly smaller on tablet */
