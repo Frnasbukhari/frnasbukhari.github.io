@@ -10,7 +10,16 @@ body {
 h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  text-align: center;
+  text-align: left; /* Align titles to the left */
+  padding-left: 1.5rem; /* Add slight padding for alignment */
+}
+
+/* Center Content */
+section {
+  padding: 3rem 5rem;
+  max-width: 900px; /* Compress content width to the center */
+  margin: auto;
+  text-align: left; /* Ensure all content aligns left */
 }
 
 /* Header Section */
@@ -18,7 +27,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3rem 10rem;
+  padding: 2rem 5rem;
   background: white;
   border-bottom: 1px solid #ddd;
 }
@@ -27,13 +36,13 @@ h2 {
   display: flex;
   align-items: center;
   gap: 2rem;
-  max-width: 1200px;
+  max-width: 900px; /* Align with the compressed center width */
   width: 100%;
 }
 
 .profile-pic {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -76,13 +85,6 @@ h2 {
 
 .social-links li img:hover {
   transform: scale(1.1);
-}
-
-/* Section Styling */
-section {
-  padding: 3rem 10rem;
-  max-width: 1200px;
-  margin: auto;
 }
 
 /* About Section */
@@ -137,6 +139,15 @@ section {
 .experience-card ul li,
 .education-card ul li {
   margin-bottom: 0.8rem;
+}
+
+/* Logos and Icons */
+.company-logo {
+  width: 40px; /* Fixed width */
+  height: 40px; /* Fixed height */
+  margin-right: 10px; /* Space between logo and text */
+  object-fit: contain;
+  vertical-align: middle;
 }
 
 /* Skills Section */
@@ -261,5 +272,10 @@ footer {
   .experience-card,
   .education-card {
     padding: 1.5rem;
+  }
+
+  .company-logo {
+    width: 30px;
+    height: 30px; /* Smaller fixed sizes for smaller screens */
   }
 }
