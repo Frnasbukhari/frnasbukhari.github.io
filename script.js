@@ -29,6 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (navbarLinks.classList.contains('active')) {
         navbarLinks.classList.remove('active');
       }
+      const toggleButton = document.querySelector('.navbar-toggle');
+      toggleButton.setAttribute('aria-expanded', 'false');
+      toggleButton.classList.remove('active');
     });
   });
 
@@ -57,8 +60,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (toggleButton) {
     toggleButton.addEventListener('click', () => {
+      const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true' || false;
       navbarLinks.classList.toggle('active');
       toggleButton.classList.toggle('active');
+      toggleButton.setAttribute('aria-expanded', !isExpanded);
     });
   }
 
@@ -68,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (navbarLinks.classList.contains('active')) {
         navbarLinks.classList.remove('active');
         toggleButton.classList.remove('active');
+        toggleButton.setAttribute('aria-expanded', 'false');
       }
     }
   });
