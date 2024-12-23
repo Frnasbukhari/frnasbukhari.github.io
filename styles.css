@@ -374,6 +374,17 @@ section {
   align-items: center;
 }
 
+.skill-icon {
+  width: var(--skill-icon-size);
+  height: var(--skill-icon-size);
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+.skill-icon:hover {
+  transform: scale(1.1);
+  transition: transform var(--transition-speed) ease;
+}
+
 .skill-category ul {
   list-style-type: none;
   padding: 0;
