@@ -226,6 +226,17 @@ section {
 }
 
 /* --------------------------------------- */
+/*            COMPANY/PROJECT LOGOS        */
+/* --------------------------------------- */
+.company-logo {
+  width: 30px;   /* Reduced from 40px to 30px */
+  height: 30px;  /* ensure it doesn't exceed 30px in height */
+  margin-right: 0.5rem;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+/* --------------------------------------- */
 /*             CARD STYLING                */
 /* --------------------------------------- */
 .card {
@@ -253,6 +264,8 @@ section {
   font-size: var(--card-title-size);
   color: #000;
   margin-bottom: 0.5rem;
+  display: flex; /* ensures the logo + text can be side by side */
+  align-items: center;
 }
 
 .project-date {
