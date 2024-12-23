@@ -22,10 +22,16 @@
   <nav class="navbar" role="navigation">
     <div class="navbar-container">
       <a href="#" class="navbar-brand">Frnas</a>
-      <button class="navbar-toggle" aria-label="Toggle navigation">
+      <!-- ARIA attributes for accessibility -->
+      <button 
+        class="navbar-toggle" 
+        aria-label="Toggle navigation" 
+        aria-expanded="false" 
+        aria-controls="navbar-links"
+      >
         <span class="hamburger"></span>
       </button>
-      <ul class="navbar-links">
+      <ul class="navbar-links" id="navbar-links">
         <li><a href="#experience" class="nav-link">Experience</a></li>
         <li><a href="#education" class="nav-link">Education</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
@@ -34,7 +40,6 @@
       </ul>
     </div>
   </nav>
-
 
   <!-- Header Section (Single Intro) -->
   <header class="header-section" role="banner">
@@ -47,103 +52,135 @@
           Through impactful internships at PwC and Procter & Gamble, I’ve contributed to projects that improve efficiency and enable data-driven decision-making. As President of the Nahda Club, I empower MENA students through mentorship and workshops.
         </p>
         <ul class="social-links">
-          <li><a href="https://www.linkedin.com/in/frnas" target="_blank" rel="noopener"><img src="icons/linkedin.svg" alt="LinkedIn" class="icon"></a></li>
-          <li><a href="mailto:fernas-2002@hotmail.com"><img src="icons/email.svg" alt="Email" class="icon"></a></li>
-          <li><a href="https://github.com/Frnasbukhari" target="_blank" rel="noopener"><img src="icons/github.svg" alt="GitHub" class="icon"></a></li>
+          <li>
+            <a href="https://www.linkedin.com/in/frnas" target="_blank" rel="noopener">
+              <img src="icons/linkedin.svg" alt="LinkedIn" class="icon">
+            </a>
+          </li>
+          <li>
+            <a href="mailto:fernas-2002@hotmail.com">
+              <img src="icons/email.svg" alt="Email" class="icon">
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Frnasbukhari" target="_blank" rel="noopener">
+              <img src="icons/github.svg" alt="GitHub" class="icon">
+            </a>
+          </li>
         </ul>
       </div>
     </div>
   </header>
   
   <!-- Main Content -->
-  <main>
+  <main role="main">
     <!-- Experience Section -->
     <section id="experience" class="experience-section">
       <h2>Experience</h2>
+
+      <!-- Nahda Club -->
       <div class="card experience-card">
-        <h3><img src="images/nahda-logo.png" alt="Nahda Club Logo" class="company-logo"> President </h3>
+        <h3>
+          <img src="images/nahda-logo.png" alt="Nahda Club Logo" class="company-logo">
+          President
+        </h3>
         <p class="project-date">Sep 2024 – Present</p>
-        <p><strong>Tools:</strong> Leadership, Event Management, Team Building</p>
         <ul>
           <li>Founded and led Nahda Student Club in Birmingham, mentoring MENA students to excel academically and professionally.</li>
           <li>Designed and delivered workshops on internship preparation, academic success, and career planning.</li>
           <li>Implemented a collaborative flat team structure to foster ownership and teamwork.</li>
         </ul>
+        <div class="tool-list">
+          <span class="tool-chip">Leadership</span>
+          <span class="tool-chip">Event Management</span>
+          <span class="tool-chip">Team Building</span>
+        </div>
       </div>
       
+      <!-- P&G Sales IT Intern -->
       <div class="card experience-card">
         <h3>
           <img src="images/pg-logo.png" alt="Procter & Gamble Logo" class="company-logo">
           Sales IT Intern
         </h3>
         <p class="project-date">Jul 2024 – Sep 2024</p>
-        <p><strong>Tools:</strong> Power BI, Data Visualisation, Business Intelligence</p>
         <ul>
-          <li>
-            Managed the execution of high-impact technology projects, ensuring seamless alignment with Procter & Gamble’s technical standards to drive business growth and operational efficiency.
-          </li>
-          <li>
-            Developed real-time automated interactive business analytics Power BI dashboards, translating complex datasets into clear, actionable insights that empowered data-driven strategic decision-making.
-          </li>
-          <li>
-            Led the Commercial Master Data Transformation project, successfully unifying data hierarchies across P&G’s systems and categories, streamlining processes, and enhancing data accuracy and consistency organization-wide.
-          </li>
+          <li>Managed the execution of high-impact technology projects, ensuring seamless alignment with Procter & Gamble’s technical standards to drive business growth and operational efficiency.</li>
+          <li>Developed real-time automated interactive business analytics Power BI dashboards, translating complex datasets into clear, actionable insights that empowered data-driven strategic decision-making.</li>
+          <li>Led the Commercial Master Data Transformation project, successfully unifying data hierarchies across P&G’s systems and categories, streamlining processes, and enhancing data accuracy and consistency organization-wide.</li>
         </ul>
+        <div class="tool-list">
+          <span class="tool-chip">Power BI</span>
+          <span class="tool-chip">Data Visualisation</span>
+          <span class="tool-chip">Business Intelligence</span>
+        </div>
       </div>
 
+      <!-- PwC Emerging Tech Lab Intern -->
       <div class="card experience-card">
         <h3>
           <img src="images/pwc-logo.png" alt="PwC Logo" class="company-logo">
           Emerging Technologies Lab Intern
         </h3>
         <p class="project-date">Jul 2023 – Aug 2023</p>
-        <p><strong>Tools:</strong> Python, OpenCV, NumPy, GPT, TensorFlow, Natural Language Processing (NLP)</p>
         <ul>
-          <li>
-            Enhanced AI prototypes by leveraging advanced computer vision techniques with OpenCV and optimizing data processing workflows using NumPy, resulting in more efficient and accurate computer vision applications.
-          </li>
-          <li>
-            Integrated large language models (LLMs), specifically GPT to augment AI capabilities, enabling more sophisticated natural language understanding and generation within emerging technologies projects.
-          </li>
-          <li>
-            Conducted comprehensive ethical AI research, analyzing the societal and organizational impacts of AI deployment, and presented actionable insights.
-          </li>
+          <li>Enhanced AI prototypes by leveraging advanced computer vision techniques with OpenCV and optimizing data processing workflows using NumPy, resulting in more efficient and accurate computer vision applications.</li>
+          <li>Integrated large language models (LLMs), specifically GPT to augment AI capabilities, enabling more sophisticated natural language understanding and generation within emerging technologies projects.</li>
+          <li>Conducted comprehensive ethical AI research, analyzing the societal and organizational impacts of AI deployment, and presented actionable insights.</li>
         </ul>
+        <div class="tool-list">
+          <span class="tool-chip">Python</span>
+          <span class="tool-chip">OpenCV</span>
+          <span class="tool-chip">NumPy</span>
+          <span class="tool-chip">GPT</span>
+          <span class="tool-chip">TensorFlow</span>
+          <span class="tool-chip">NLP</span>
+        </div>
       </div>
-
     </section>
 
     <!-- Education Section -->
     <section id="education" class="education-section">
       <h2>Education</h2>
       <div class="card education-card">
-        <h3><img src="images/univ-logo.png" alt="University of Birmingham Logo" class="company-logo"> University of Birmingham</h3>
-        <p class="project-date">BSc Artificial Intelligence & Computer Science (2021 – 2025)</p>
+        <h3>
+          <img src="images/univ-logo.png" alt="University of Birmingham Logo" class="company-logo">
+          University of Birmingham
+        </h3>
+        <p class="project-date">BSc Artificial Intelligence &amp; Computer Science (2021 – 2025)</p>
         <ul>
           <li>Achieving First Class Honours (GPA: 4/4).</li>
           <li>Relevant Modules: Artificial Intelligence, Intelligent Data Analysis, and Software Engineering.</li>
         </ul>
+        <!-- No tools listed for education -->
       </div>
     </section>
-
 
     <!-- Projects Section -->
     <section id="projects" class="projects-section">
       <h2>Projects</h2>
       
-      <!-- Leveraging Large Language Models Project -->
+      <!-- Leveraging LLM Project -->
       <div class="card project-card">
         <h3>
           <img src="images/FYP-LLM.png" alt="Project Logo" class="company-logo">
           Leveraging Large Language Models: A Framework for Review-Driven Insights in Hospitality
         </h3>
         <p class="project-date">Oct 2024 – Present</p>
-        <p><strong>Tools:</strong> Python, LLaMA, VADER, BERT, Power BI, Natural Language Processing (NLP), Machine Learning</p>
         <p>
           Currently working on creating an advanced AI-powered framework utilizing Large Language Models (LLMs) such as LLaMA and BERT to perform comprehensive sentiment analysis and topic modeling on vast volumes of guest feedback data. Integrated VADER for nuanced sentiment scoring, enabling precise differentiation between subtle emotional tones within reviews, thereby enhancing the accuracy of customer satisfaction assessments. Developed interactive Power BI dashboards to visualize sentiment trends and key performance indicators (KPIs), facilitating data-driven decision-making for hotel management. Implemented data preprocessing pipelines using Python and NLP techniques to cleanse, tokenize, and normalize textual data, ensuring high-quality input for machine learning models.
         </p>
+        <div class="tool-list">
+          <span class="tool-chip">Python</span>
+          <span class="tool-chip">LLaMA</span>
+          <span class="tool-chip">VADER</span>
+          <span class="tool-chip">BERT</span>
+          <span class="tool-chip">Power BI</span>
+          <span class="tool-chip">NLP</span>
+          <span class="tool-chip">Machine Learning</span>
+        </div>
       </div>
-      
+
       <!-- Glow Brush Project -->
       <div class="card project-card">
         <h3>
@@ -151,10 +188,16 @@
           Glow Brush: Gamified Smart Toothbrush
         </h3>
         <p class="project-date">Nov 2024 – Dec 2024</p>
-        <p><strong>Tools:</strong> Figma, Usability Evaluation, Human-Computer Interaction (HCI), Cognitive Walkthroughs, Heuristic Evaluations</p>
         <p>
           Collaborated within a team to design and develop a smart toothbrush application aimed at enhancing children's oral hygiene through gamification, leveraging insights from the Human-Computer Interaction (HCI) module. Conducted comprehensive usability testing, including cognitive walkthroughs and heuristic evaluations, to assess and improve the app's user experience, ensuring it meets high standards of accessibility and engagement. Utilized Figma for prototyping and iterative design, refining user interfaces based on feedback and usability metrics to create an intuitive and visually appealing application. Implemented user-centered and inclusive design principles, emphasizing the importance of teamwork, iterative testing, and continuous feedback in developing engaging, user-friendly solutions.
         </p>
+        <div class="tool-list">
+          <span class="tool-chip">Figma</span>
+          <span class="tool-chip">Usability Evaluation</span>
+          <span class="tool-chip">HCI</span>
+          <span class="tool-chip">Cognitive Walkthroughs</span>
+          <span class="tool-chip">Heuristic Evaluations</span>
+        </div>
       </div>
 
       <!-- Commercial Data Transformation Project -->
@@ -164,161 +207,178 @@
           Commercial Master Data Transformation
         </h3>
         <p class="project-date">Jul 2024 – Sep 2024</p>
-        <p><strong>Tools:</strong> Power BI, Power Query, ETL Processes, Data Transformation</p>
         <p>
           Led a global initiative to unify data hierarchies across P&G’s systems and categories by automating manual data mappings and seamlessly integrating disparate data sources, enhancing overall operational efficiency. Designed and implemented robust ETL (Extract, Transform, Load) pipelines using Power Query, ensuring accurate and timely data processing across categories.
         </p>
+        <div class="tool-list">
+          <span class="tool-chip">Power BI</span>
+          <span class="tool-chip">Power Query</span>
+          <span class="tool-chip">ETL Processes</span>
+          <span class="tool-chip">Data Transformation</span>
+        </div>
       </div>
-      
-      <!-- Interactive Power BI Dashboards Project -->
+
+      <!-- Automated Reports & Dashboards -->
       <div class="card project-card">
         <h3>
           <img src="images/pg-logo.png" alt="Procter & Gamble Logo" class="company-logo">
-          Automated Reports & Dashboards
+          Automated Reports &amp; Dashboards
         </h3>
         <p class="project-date">Aug 2024 – Sep 2024</p>
-        <p><strong>Tools:</strong> Power BI, Power Query, ETL Processes, DAX (Data Analysis Expressions), Data Modeling</p>
         <p>
           Designed and developed dynamic Power BI dashboards that delivered real-time analytics and comprehensive business intelligence insights, enabling leadership teams to make informed, data-driven strategic decisions. Implemented advanced ETL (Extract, Transform, Load) processes using Power Query to seamlessly integrate and cleanse data from multiple sources, ensuring data accuracy and consistency across all reports. Utilized DAX to create complex calculations and measures, enhancing the analytical capabilities of dashboards and providing deeper insights into key performance indicators (KPIs). Collaborated with cross-functional teams to gather requirements and tailor dashboards to meet specific business needs. Conducted data modeling and schema design to optimize data relationships and improve query performance, facilitating faster data retrieval and analysis. Developed interactive visualizations and drill-through functionalities, enabling users to explore data at granular levels and uncover actionable trends and patterns.
         </p>
+        <div class="tool-list">
+          <span class="tool-chip">Power BI</span>
+          <span class="tool-chip">Power Query</span>
+          <span class="tool-chip">ETL Processes</span>
+          <span class="tool-chip">DAX</span>
+          <span class="tool-chip">Data Modeling</span>
+        </div>
       </div>
-      
-      <!-- Sticky-Notes Image Generator Prototype Project -->
+
+      <!-- Sticky-Notes Image Generator Prototype -->
       <div class="card project-card">
         <h3>
           <img src="images/pwc-logo.png" alt="PwC Logo" class="company-logo">
           Sticky-Notes Image Generator Prototype
         </h3>
         <p class="project-date">Jul 2023 – Aug 2023</p>
-        <p><strong>Tools:</strong> GPT & DALL-E API, Python, OpenCV, NumPy, Natural Language Processing (NLP), Computer Vision</p>
         <p>
-          Enhanced an AI-powered system by integrating ChatGPT for advanced keyword extraction and optimization, enabling the transformation of sticky note text into contextually meaningful and visually coherent images. Utilized DALL-E API to generate high-quality images from extracted keywords, ensuring that visual outputs accurately represented the textual input while maintaining aesthetic standards. 
+          Enhanced an AI-powered system by integrating ChatGPT for advanced keyword extraction and optimization, enabling the transformation of sticky note text into contextually meaningful and visually coherent images. Utilized DALL-E API to generate high-quality images from extracted keywords, ensuring that visual outputs accurately represented the textual input while maintaining aesthetic standards.
         </p>
+        <div class="tool-list">
+          <span class="tool-chip">GPT &amp; DALL-E API</span>
+          <span class="tool-chip">Python</span>
+          <span class="tool-chip">OpenCV</span>
+          <span class="tool-chip">NumPy</span>
+          <span class="tool-chip">NLP</span>
+          <span class="tool-chip">Computer Vision</span>
+        </div>
       </div>
       
     </section>
 
-<!-- Skills Section -->
-<section id="skills" class="skills-section">
-  <h2>Skills</h2>
-  <div class="skills-container">
-    
-    <!-- Programming Languages -->
-    <div class="skill-category">
-      <h3>Programming Languages</h3>
-      <ul>
-        <li>
-          <img src="icons/python.svg" alt="Python Logo" class="skill-icon" title="Advanced Python Programming">
-          Python
-          <span class="skill-level">★★★★★</span>
-        </li>
-        <li>
-          <img src="icons/java.svg" alt="Java Logo" class="skill-icon" title="Proficient in Java">
-          Java
-          <span class="skill-level">★★★★★</span>
-        </li>
-        <li>
-          <img src="icons/matlab.svg" alt="MATLAB Logo" class="skill-icon" title="Intermediate MATLAB">
-          MATLAB
-          <span class="skill-level">★★★☆☆</span>
-        </li>
-      </ul>
-    </div>
-    
-    <!-- AI & Data Science Tools -->
-    <div class="skill-category">
-      <h3>AI & Data Science Tools</h3>
-      <ul>
-        <li>
-          <img src="icons/powerbi.svg" alt="Power BI Logo" class="skill-icon" title="Proficient in Power BI">
-          Power BI
-          <span class="skill-level">★★★★★</span>
-        </li>
-        <li>
-          <img src="icons/pandas.svg" alt="Pandas Logo" class="skill-icon" title="Advanced Pandas">
-          Pandas
-          <span class="skill-level">★★★★★</span>
-        </li>
-        <li>
-          <img src="icons/tensorflow.svg" alt="TensorFlow Logo" class="skill-icon" title="Advanced TensorFlow">
-          TensorFlow
-          <span class="skill-level">★★★★☆</span>
-        </li>
-        <li>
-          <img src="icons/pytorch.svg" alt="PyTorch Logo" class="skill-icon" title="Proficient in PyTorch">
-          PyTorch
-          <span class="skill-level">★★★★☆</span>
-        </li>
-        <li>
-          <img src="icons/opencv.svg" alt="OpenCV Logo" class="skill-icon" title="Proficient in OpenCV">
-          OpenCV
-          <span class="skill-level">★★★★☆</span>
-        </li>
-        <li>
-          <img src="icons/numpy.svg" alt="NumPy Logo" class="skill-icon" title="Advanced NumPy">
-          NumPy
-          <span class="skill-level">★★★★☆</span>
-        </li>
-      </ul>
-    </div>
-    
-    <!-- Design & Development -->
-    <div class="skill-category">
-      <h3>Design & Development</h3>
-      <ul>
-        <li>
-          <img src="icons/figma.svg" alt="Figma Logo" class="skill-icon" title="Proficient in Figma">
-          Figma
-          <span class="skill-level">★★★★★</span>
-        </li>
-        <li>
-          <img src="icons/agile.svg" alt="Agile Methodologies Icon" class="skill-icon" title="Proficient in Agile Methodologies">
-          Agile Methodologies
-          <span class="skill-level">★★★★★</span>
-        </li>
-        <li>
-          <img src="icons/hci.svg" alt="HCI Icon" class="skill-icon" title="Proficient in Human-Computer Interaction (HCI)">
-          Human-Computer Interaction
-          <span class="skill-level">★★★★★</span>
-        </li>
-        <li>
-          <img src="icons/usability.svg" alt="Usability Evaluation Icon" class="skill-icon" title="Proficient in Usability Evaluation">
-          Usability Evaluation
-          <span class="skill-level">★★★★☆</span>
-        </li>
-      </ul>
-    </div>
-    
-    
-    <!-- Additional Skills -->
-    <div class="skill-category">
-      <h3>Additional Skills</h3>
-      <ul>
-        <li>
-          <img src="icons/nlp.svg" alt="NLP Icon" class="skill-icon" title="Natural Language Processing (NLP)">
-          Natural Language Processing (NLP)
-        </li>
-        <li>
-          <img src="icons/machine-learning.svg" alt="Machine Learning Icon" class="skill-icon" title="Machine Learning (ML)">
-          Machine Learning (ML)
-        </li>
-        <li>
-          <img src="icons/data-visualisation.svg" alt="Data Visualization Icon" class="skill-icon" title="Data Visualization">
-          Data Visualization
-        </li>
-        <li>
-          <img src="icons/api.svg" alt="API Integration Icon" class="skill-icon" title="API Integration">
-          API Integration
-        </li>
-        <li>
-          <img src="icons/git.svg" alt="Git Logo" class="skill-icon" title="Version Control (Git)">
-          Version Control (Git)
-        </li>
-      </ul>
-    </div>
-    
-  </div>
-</section>
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+      <h2>Skills</h2>
+      <div class="skills-container">
+        
+        <!-- Programming Languages -->
+        <div class="skill-category">
+          <h3>Programming Languages</h3>
+          <ul>
+            <li>
+              <img src="icons/python.svg" alt="Python Logo" class="skill-icon" title="Advanced Python Programming">
+              Python
+              <span class="skill-level">★★★★★</span>
+            </li>
+            <li>
+              <img src="icons/java.svg" alt="Java Logo" class="skill-icon" title="Proficient in Java">
+              Java
+              <span class="skill-level">★★★★★</span>
+            </li>
+            <li>
+              <img src="icons/matlab.svg" alt="MATLAB Logo" class="skill-icon" title="Intermediate MATLAB">
+              MATLAB
+              <span class="skill-level">★★★☆☆</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- AI & Data Science Tools -->
+        <div class="skill-category">
+          <h3>AI &amp; Data Science Tools</h3>
+          <ul>
+            <li>
+              <img src="icons/powerbi.svg" alt="Power BI Logo" class="skill-icon" title="Proficient in Power BI">
+              Power BI
+              <span class="skill-level">★★★★★</span>
+            </li>
+            <li>
+              <img src="icons/pandas.svg" alt="Pandas Logo" class="skill-icon" title="Advanced Pandas">
+              Pandas
+              <span class="skill-level">★★★★★</span>
+            </li>
+            <li>
+              <img src="icons/tensorflow.svg" alt="TensorFlow Logo" class="skill-icon" title="Advanced TensorFlow">
+              TensorFlow
+              <span class="skill-level">★★★★☆</span>
+            </li>
+            <li>
+              <img src="icons/pytorch.svg" alt="PyTorch Logo" class="skill-icon" title="Proficient in PyTorch">
+              PyTorch
+              <span class="skill-level">★★★★☆</span>
+            </li>
+            <li>
+              <img src="icons/opencv.svg" alt="OpenCV Logo" class="skill-icon" title="Proficient in OpenCV">
+              OpenCV
+              <span class="skill-level">★★★★☆</span>
+            </li>
+            <li>
+              <img src="icons/numpy.svg" alt="NumPy Logo" class="skill-icon" title="Advanced NumPy">
+              NumPy
+              <span class="skill-level">★★★★☆</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Design & Development -->
+        <div class="skill-category">
+          <h3>Design &amp; Development</h3>
+          <ul>
+            <li>
+              <img src="icons/figma.svg" alt="Figma Logo" class="skill-icon" title="Proficient in Figma">
+              Figma
+              <span class="skill-level">★★★★★</span>
+            </li>
+            <li>
+              <img src="icons/agile.svg" alt="Agile Methodologies Icon" class="skill-icon" title="Proficient in Agile Methodologies">
+              Agile Methodologies
+              <span class="skill-level">★★★★★</span>
+            </li>
+            <li>
+              <img src="icons/hci.svg" alt="HCI Icon" class="skill-icon" title="Proficient in Human-Computer Interaction (HCI)">
+              Human-Computer Interaction
+              <span class="skill-level">★★★★★</span>
+            </li>
+            <li>
+              <img src="icons/usability.svg" alt="Usability Evaluation Icon" class="skill-icon" title="Proficient in Usability Evaluation">
+              Usability Evaluation
+              <span class="skill-level">★★★★☆</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Additional Skills -->
+        <div class="skill-category">
+          <h3>Additional Skills</h3>
+          <ul>
+            <li>
+              <img src="icons/nlp.svg" alt="NLP Icon" class="skill-icon" title="Natural Language Processing (NLP)">
+              Natural Language Processing (NLP)
+            </li>
+            <li>
+              <img src="icons/machine-learning.svg" alt="Machine Learning Icon" class="skill-icon" title="Machine Learning (ML)">
+              Machine Learning (ML)
+            </li>
+            <li>
+              <img src="icons/data-visualisation.svg" alt="Data Visualization Icon" class="skill-icon" title="Data Visualization">
+              Data Visualization
+            </li>
+            <li>
+              <img src="icons/api.svg" alt="API Integration Icon" class="skill-icon" title="API Integration">
+              API Integration
+            </li>
+            <li>
+              <img src="icons/git.svg" alt="Git Logo" class="skill-icon" title="Version Control (Git)">
+              Version Control (Git)
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
