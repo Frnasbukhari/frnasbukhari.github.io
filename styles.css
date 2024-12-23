@@ -215,7 +215,6 @@ button:focus,
 /* --------------------------------------- */
 /*             SECTIONS & TITLES           */
 /* --------------------------------------- */
-/* Increase left/right padding & shrink max-width for narrower content */
 section {
   max-width: 800px;
   margin: 0 auto;
@@ -223,12 +222,12 @@ section {
   padding: var(--section-padding) 2rem;
 }
 
-/* Add a small gap (margin-bottom) between the h2 and the following card */
+/* Space between h2 and the first card */
 .experience-section h2,
 .education-section h2,
 .projects-section h2,
 .skills-section h2 {
-  margin-bottom: 0.5rem; /* Adjust as preferred */
+  margin-bottom: 0.5rem; /* you can adjust as needed */
 }
 
 /* --------------------------------------- */
@@ -241,6 +240,7 @@ section {
   padding: var(--card-padding);
   margin-bottom: var(--card-margin-bottom);
   box-shadow: 0 4px 12px var(--card-shadow);
+
   /* Ensures embedded media inherits the same corner radius */
   overflow: hidden; 
   transition: transform var(--transition-speed), box-shadow var(--transition-speed);
@@ -291,16 +291,21 @@ section {
   margin-bottom: 0.6rem;
 }
 
+/* Title for pictures (or any media) inside the card */
+.picture-title {
+  font-size: 0.85rem;
+  margin-top: 1rem;      /* space above the title */
+  margin-bottom: 0.4rem; /* slight space before the image/video */
+  color: #333;
+  font-weight: 600;
+}
+
 /* Embedded Media (Images/Videos) with matching corners */
 .card-media {
   display: block;
   width: 100%;
   height: auto;
-  margin-top: 1rem;
-  /* 
-    No border-radius here because the .card's 
-    overflow: hidden + border-radius will clip it.
-  */
+  margin-top: 0.5rem; /* optional spacing if you want more gap */
 }
 
 /* Tools as chips */
@@ -330,7 +335,6 @@ section {
 /*             SKILLS SECTION             */
 /* --------------------------------------- */
 .skills-section {
-  /* We'll override section's styling because skills had a background. */
   max-width: 800px;
   margin: 0 auto;
   padding: var(--section-padding) 2rem;
