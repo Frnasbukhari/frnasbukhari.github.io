@@ -51,7 +51,7 @@ a:focus {
   text-decoration: underline;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   margin: 0;
 }
 
@@ -91,6 +91,7 @@ button:focus,
   color: var(--text-color);
 }
 
+/* Toggle Button */
 .navbar-toggle {
   display: none;
   background: none;
@@ -122,15 +123,10 @@ button:focus,
   top: 8px;
 }
 
+/* Navbar Links */
 .navbar-links {
   display: flex;
   gap: 1.5rem;
-}
-
-/* Transition for mobile nav */
-.navbar-links {
-  max-height: none; /* default for larger screens */
-  overflow: visible;
 }
 
 .navbar-links li {
@@ -158,7 +154,6 @@ button:focus,
   background: #fff;
 }
 
-/* Center everything in the header */
 .intro-container {
   display: flex;
   align-items: center;
@@ -191,7 +186,7 @@ button:focus,
   line-height: 1.4;
 }
 
-/* Centered social links + no bullets */
+/* Social Links */
 .social-links {
   display: flex;
   gap: 1rem;
@@ -203,12 +198,12 @@ button:focus,
 .social-links li {
   list-style: none;
 }
-.social-links li img {
+.icon {
   width: 24px;
   height: 24px;
   transition: transform var(--transition-speed) ease-in-out;
 }
-.social-links li img:hover {
+.icon:hover {
   transform: scale(1.1);
 }
 
@@ -222,30 +217,32 @@ section {
   padding: var(--section-padding) 2rem;
 }
 
-/* Space between h2 and the first card */
+/* Small gap between the section title and the first card */
 .experience-section h2,
 .education-section h2,
 .projects-section h2,
 .skills-section h2 {
-  margin-bottom: 0.5rem; /* you can adjust as needed */
+  margin-bottom: 0.5rem;
 }
 
 /* --------------------------------------- */
-/*             CARDS (Experience,etc.)     */
+/*             CARD STYLING                */
 /* --------------------------------------- */
 .card {
   background: var(--card-background);
   border: 1px solid var(--card-border);
-  border-radius: 8px;
+  /* bigger border-radius to ensure 100% noticeable corners */
+  border-radius: 12px; 
   padding: var(--card-padding);
   margin-bottom: var(--card-margin-bottom);
   box-shadow: 0 4px 12px var(--card-shadow);
 
-  /* Ensures embedded media inherits the same corner radius */
+  /* Overflows hidden => Child media corners are clipped 100% */
   overflow: hidden; 
   transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
+/* On hover, raise the card a bit */
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
@@ -253,28 +250,17 @@ section {
 
 /* Card Titles: smaller, black */
 .card h3 {
-  display: flex;
-  align-items: center;
   font-size: var(--card-title-size);
   color: #000;
   margin-bottom: 0.5rem;
 }
 
-.company-logo {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-  object-fit: contain;
-  vertical-align: middle;
-}
-
-/* Italic date style */
 .project-date {
   font-style: italic;
   margin-bottom: 0.5rem;
 }
 
-/* Smaller text in card body */
+/* Card text is smaller */
 .card p,
 .card ul li {
   font-size: var(--card-body-size);
@@ -291,24 +277,29 @@ section {
   margin-bottom: 0.6rem;
 }
 
-/* Title for pictures (or any media) inside the card */
-.picture-title {
-  font-size: 0.85rem;
-  margin-top: 1rem;      /* space above the title */
-  margin-bottom: 0.4rem; /* slight space before the image/video */
-  color: #333;
-  font-weight: 600;
-}
-
-/* Embedded Media (Images/Videos) with matching corners */
+/* 
+  Guarantee fully rounded corners by also giving 
+  .card-media the same radius, 
+  though .card overflow: hidden should handle it. 
+*/
 .card-media {
   display: block;
   width: 100%;
   height: auto;
-  margin-top: 0.5rem; /* optional spacing if you want more gap */
+  margin-top: 0.5rem;
+  border-radius: 12px; /* Double insurance for 100% smooth corners */
 }
 
-/* Tools as chips */
+/* Picture Title / Subtitle for the image */
+.picture-title {
+  font-size: 0.85rem;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Tools as Chips */
 .tool-list {
   margin-top: 0.5rem;
   display: flex;
@@ -332,7 +323,7 @@ section {
 }
 
 /* --------------------------------------- */
-/*             SKILLS SECTION             */
+/*            SKILLS SECTION              */
 /* --------------------------------------- */
 .skills-section {
   max-width: 800px;
@@ -362,7 +353,6 @@ section {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* Smaller, black skill titles */
 .skill-category h3 {
   font-size: var(--card-title-size);
   color: #000;
@@ -371,47 +361,19 @@ section {
   align-items: center;
 }
 
-.skill-icon {
-  width: var(--skill-icon-size);
-  height: var(--skill-icon-size);
-  margin-right: 0.5rem;
-  vertical-align: middle;
-}
-
-.skill-level {
-  color: var(--skill-star-color) !important;
-  margin-left: 0.5rem;
-  font-size: 1rem;
-}
-
 .skill-category ul {
   list-style-type: none;
   padding: 0;
 }
+
 .skill-category ul li {
   margin-bottom: 0.5rem;
   font-size: 1rem;
   color: #555;
-  display: flex;
-  align-items: center;
-}
-.skill-category ul li .skill-icon {
-  margin-right: 0.5rem;
-}
-.skill-category ul li .skill-level {
-  margin-left: auto;
-}
-.skill-category ul li:hover {
-  color: var(--primary-color);
-  transition: color var(--transition-speed) ease;
-}
-.skill-icon:hover {
-  transform: scale(1.1);
-  transition: transform var(--transition-speed) ease;
 }
 
 /* --------------------------------------- */
-/*            CONTACT SECTION              */
+/*            CONTACT SECTION             */
 /* --------------------------------------- */
 .contact-section {
   max-width: 800px;
@@ -419,20 +381,10 @@ section {
   padding: var(--section-padding) 2rem;
   text-align: center;
 }
+
 .contact-section h2 {
   font-size: var(--block-title-size);
   margin-bottom: 1rem;
-}
-.contact-section p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-.contact-section a {
-  color: var(--primary-color);
-  transition: color var(--transition-speed) ease-in-out;
-}
-.contact-section a:hover {
-  color: var(--secondary-color);
 }
 
 /* --------------------------------------- */
@@ -453,25 +405,27 @@ footer {
 
 /* For Tablets & Below */
 @media (max-width: 768px) {
+  /* Show toggle button */
   .navbar-toggle {
     display: block;
   }
+
+  /* Hide links by default */
   .navbar-links {
-    display: block;
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background: #fff;
     position: absolute;
     top: 60px;
     right: 1rem;
     width: 200px;
-    background: #fff;
     border: 1px solid var(--card-border);
     border-radius: 8px;
     padding: 1rem;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height var(--transition-speed) ease-in-out;
   }
   .navbar-links.active {
-    max-height: 400px; /* show menu */
+    display: flex; /* Toggled */
   }
 
   .intro-container {
@@ -484,28 +438,13 @@ footer {
     width: 120px;
     height: 120px;
   }
-  .company-logo {
-    width: 30px;
-    height: 30px;
-  }
-  h2 {
-    font-size: 1.4rem; /* Slightly smaller on tablet */
-  }
-  .card h3,
-  .skill-category h3 {
-    font-size: 1rem;
+  .skill-category {
+    flex: 1 1 100%;
   }
 }
 
 /* For Mobile Screens */
 @media (max-width: 480px) {
-  .intro-container {
-    padding: 0 1rem;
-  }
-  .profile-pic {
-    width: 100px;
-    height: 100px;
-  }
   .navbar-container {
     padding: 0.5rem;
   }
@@ -515,13 +454,20 @@ footer {
   .navbar-links {
     width: 150px;
   }
+  .intro-container {
+    padding: 0 1rem;
+  }
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
   h1 {
-    font-size: 1.8rem;  /* Smaller name on mobile */
+    font-size: 1.8rem;
   }
   h2 {
-    font-size: 1.3rem;  /* Even smaller for mobile section titles */
+    font-size: 1.3rem;
   }
   .skill-category h3 {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
