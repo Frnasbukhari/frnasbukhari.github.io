@@ -15,18 +15,18 @@
   /* Title & Spacing Adjustments */
   --block-title-size: 1.6rem; /* Section titles */
   --card-title-size: 1.1rem;  /* Card h3 titles */
-  --section-padding: 2rem;    
-  --card-margin-bottom: 1rem; 
-  --card-padding: 1.5rem;     
+  --section-padding: 2rem;
+  --card-margin-bottom: 1rem;
+  --card-padding: 1.5rem;
 
   /* Skill Icon & Star Colors */
   --skill-icon-size: 14px;
-  --skill-star-color: #000;   /* black stars */
+  --skill-star-color: #000; /* black stars */
 
   /* Smaller text settings */
-  --intro-name-size: 2rem;    
-  --intro-text-size: 1rem;    
-  --card-body-size: 0.8rem;   
+  --intro-name-size: 2rem;
+  --intro-text-size: 1rem;
+  --card-body-size: 0.8rem;
 }
 
 * {
@@ -220,7 +220,7 @@ section {
   max-width: 800px;
   margin: 0 auto;
   text-align: left;
-  padding: var(--section-padding) 2rem; 
+  padding: var(--section-padding) 2rem;
 }
 
 /* --------------------------------------- */
@@ -233,8 +233,11 @@ section {
   padding: var(--card-padding);
   margin-bottom: var(--card-margin-bottom);
   box-shadow: 0 4px 12px var(--card-shadow);
+  /* Ensures embedded media inherits the same corner radius */
+  overflow: hidden; 
   transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
+
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
@@ -278,6 +281,19 @@ section {
 }
 .card ul li {
   margin-bottom: 0.6rem;
+}
+
+/* Embedded Media (Images/Videos) with matching corners */
+.card-media {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  /* 
+    No border-radius here because we rely on 
+    the card's border-radius + overflow: hidden 
+    to clip corners.
+  */
 }
 
 /* Tools as chips */
@@ -466,7 +482,7 @@ footer {
   }
   .card h3,
   .skill-category h3 {
-    font-size: 1rem; 
+    font-size: 1rem;
   }
 }
 
@@ -495,6 +511,6 @@ footer {
     font-size: 1.3rem;  /* Even smaller for mobile section titles */
   }
   .skill-category h3 {
-    font-size: 0.9rem; 
+    font-size: 0.9rem;
   }
 }
