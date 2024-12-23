@@ -223,6 +223,14 @@ section {
   padding: var(--section-padding) 2rem;
 }
 
+/* Add a small gap (margin-bottom) between the h2 and the following card */
+.experience-section h2,
+.education-section h2,
+.projects-section h2,
+.skills-section h2 {
+  margin-bottom: 0.5rem; /* Adjust as preferred */
+}
+
 /* --------------------------------------- */
 /*             CARDS (Experience,etc.)     */
 /* --------------------------------------- */
@@ -290,9 +298,8 @@ section {
   height: auto;
   margin-top: 1rem;
   /* 
-    No border-radius here because we rely on 
-    the card's border-radius + overflow: hidden 
-    to clip corners.
+    No border-radius here because the .card's 
+    overflow: hidden + border-radius will clip it.
   */
 }
 
