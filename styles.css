@@ -217,14 +217,23 @@ section {
   padding: var(--section-padding) 2rem;
 }
 
+/* Small gap between the section title and the first card */
 .experience-section h2,
 .education-section h2,
 .projects-section h2,
-.skills-section h2,
-.writings-talks-section h2 {
+.skills-section h2 {
   margin-bottom: 0.5rem;
-  font-size: var(--block-title-size);
-  color: var(--text-color);
+}
+
+/* --------------------------------------- */
+/*            COMPANY/PROJECT LOGOS        */
+/* --------------------------------------- */
+.company-logo {
+  width: 30px;   /* Reduced from 40px to 30px */
+  height: 30px;  /* ensure it doesn't exceed 30px in height */
+  margin-right: 0.5rem;
+  object-fit: contain;
+  vertical-align: middle;
 }
 
 /* --------------------------------------- */
@@ -233,78 +242,275 @@ section {
 .card {
   background: var(--card-background);
   border: 1px solid var(--card-border);
-  border-radius: 12px;
+  /* bigger border-radius to ensure 100% noticeable corners */
+  border-radius: 12px; 
   padding: var(--card-padding);
   margin-bottom: var(--card-margin-bottom);
   box-shadow: 0 4px 12px var(--card-shadow);
+
+  /* Overflows hidden => Child media corners are clipped 100% */
+  overflow: hidden; 
   transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
+/* On hover, raise the card a bit */
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
+/* Card Titles: smaller, black */
 .card h3 {
   font-size: var(--card-title-size);
   color: #000;
   margin-bottom: 0.5rem;
+  display: flex; /* ensures the logo + text can be side by side */
+  align-items: center;
 }
 
 .project-date {
   font-style: italic;
   margin-bottom: 0.5rem;
-  color: #666;
 }
 
-.description {
+/* Card text is smaller */
+.card p,
+.card ul li {
   font-size: var(--card-body-size);
   line-height: 1.4;
-  margin-bottom: 1rem;
   color: var(--text-color);
 }
 
+/* Card Lists */
+.card ul {
+  padding-left: 1.5rem;
+  list-style: disc;
+}
+.card ul li {
+  margin-bottom: 0.6rem;
+}
+
+/* 
+  Guarantee fully rounded corners by also giving 
+  .card-media the same radius, 
+  though .card overflow: hidden should handle it. 
+*/
+.card-media {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 0.5rem;
+  border-radius: 12px; /* Double insurance for 100% smooth corners */
+}
+
+/* Picture Title / Subtitle for the image */
+.picture-title {
+  font-size: 0.85rem;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Tools as Chips */
+.tool-list {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tool-chip {
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  color: var(--text-color);
+  transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+.tool-chip:hover {
+  background-color: #ddd;
+  transform: scale(1.05);
+}
+
+
 /* --------------------------------------- */
-/*       WRITINGS AND TALKS SECTION        */
+/*             SKILLS SECTION             */
 /* --------------------------------------- */
-.writings-talks-section {
+.skills-section {
   max-width: 800px;
   margin: 0 auto;
   padding: var(--section-padding) 2rem;
-  text-align: left;
+  background-color: #f9f9f9;
+  border-radius: 12px;
 }
 
-/* Responsive Media Queries */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.skill-category {
+  flex: 1 1 250px;
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--card-shadow);
+  transition: box-shadow var(--transition-speed);
+}
+.skill-category:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Smaller, black skill titles */
+.skill-category h3 {
+  font-size: var(--card-title-size);
+  color: #000;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.skill-icon {
+  width: var(--skill-icon-size);
+  height: var(--skill-icon-size);
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.skill-level {
+  color: var(--skill-star-color) !important;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+
+.skill-category ul {
+  list-style-type: none;
+  padding: 0;
+}
+.skill-category ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+}
+.skill-category ul li .skill-icon {
+  margin-right: 0.5rem;
+}
+.skill-category ul li .skill-level {
+  margin-left: auto;
+}
+.skill-category ul li:hover {
+  color: var(--primary-color);
+  transition: color var(--transition-speed) ease;
+}
+.skill-icon:hover {
+  transform: scale(1.1);
+  transition: transform var(--transition-speed) ease;
+}
+
+/* --------------------------------------- */
+/*            CONTACT SECTION             */
+/* --------------------------------------- */
+.contact-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--section-padding) 2rem;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: var(--block-title-size);
+  margin-bottom: 1rem;
+}
+
+/* --------------------------------------- */
+/*                FOOTER                   */
+/* --------------------------------------- */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #333;
+  color: #fff;
+  width: 100%;
+  position: relative;
+}
+
+/* --------------------------------------- */
+/*       RESPONSIVE MEDIA QUERIES         */
+/* --------------------------------------- */
+
+/* For Tablets & Below */
 @media (max-width: 768px) {
-  .navbar-links {
-    flex-direction: column;
-    display: none;
+  /* Show toggle button */
+  .navbar-toggle {
+    display: block;
   }
 
+  /* Hide links by default */
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    right: 1rem;
+    width: 200px;
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 1rem;
+  }
   .navbar-links.active {
-    display: flex;
+    display: flex; /* Toggled */
   }
 
   .intro-container {
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     gap: 1rem;
+  }
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+  .skill-category {
+    flex: 1 1 100%;
   }
 }
 
+/* For Mobile Screens */
 @media (max-width: 480px) {
+  .navbar-container {
+    padding: 0.5rem;
+  }
   .navbar-brand {
     font-size: 1.25rem;
   }
-
+  .navbar-links {
+    width: 150px;
+  }
   .intro-container {
-    padding: 1rem;
+    padding: 0 1rem;
   }
-
-  .card {
-    padding: 1rem;
+  .profile-pic {
+    width: 100px;
+    height: 100px;
   }
-
-  .writings-talks-section h2 {
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
     font-size: 1.3rem;
+  }
+  .skill-category h3 {
+    font-size: 1rem;
   }
 }
