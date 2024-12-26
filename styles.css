@@ -339,18 +339,24 @@ section {
 /*       WRITINGS AND TALKS SECTION        */
 /* --------------------------------------- */
 
-/* Embedded Content (Twitter and Instagram) */
+/* Ensure tweets take up the full width of the card */
 .writings-talks-section .card blockquote.twitter-tweet {
   margin: 0;
   padding: 0;
-  width: 100% !important;
-  box-sizing: border-box;
+  width: 100%;
+  box-sizing: border-box; /* Include padding/border in width calculations */
+  display: block;
 }
 
+/* Adjust the embedded iframe */
 .writings-talks-section .card blockquote.twitter-tweet iframe {
-  width: 100% !important;
+  width: 100% !important; /* Force the iframe to take the full width */
   max-width: 100% !important;
-  margin: 0 auto;
+  height: auto !important; /* Ensure proper scaling */
+  display: block; /* Ensure it respects the parent block layout */
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+  border: none; /* Ensure no border is visible */
 }
 
 .writings-talks-section .card iframe.instagram-embed {
