@@ -338,33 +338,33 @@ section {
 /* --------------------------------------- */
 /*       WRITINGS AND TALKS SECTION        */
 /* --------------------------------------- */
-
-/* Ensure tweets take up the full width of the card */
-.writings-talks-section .card blockquote.twitter-tweet {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  box-sizing: border-box; /* Include padding/border in width calculations */
-  display: block;
-}
-
-/* Adjust the embedded iframe */
-.writings-talks-section .card blockquote.twitter-tweet iframe {
-  width: 100% !important; /* Force the iframe to take the full width */
-  max-width: 100% !important;
-  height: auto !important; /* Ensure proper scaling */
-  display: block; /* Ensure it respects the parent block layout */
-  margin: 0; /* Remove default margins */
-  padding: 0; /* Remove default padding */
-  border: none; /* Ensure no border is visible */
-}
-
+/* Ensure tweets and Instagram posts take the full width of the card */
+.writings-talks-section .card blockquote.twitter-tweet,
 .writings-talks-section .card iframe.instagram-embed {
-  width: 100% !important;
-  max-width: 100% !important;
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
   border: none;
-  overflow: hidden;
-  border-radius: 0;
+}
+
+/* Add maximum height and vertical scaling */
+.writings-talks-section .card blockquote.twitter-tweet iframe,
+.writings-talks-section .card iframe.instagram-embed {
+  width: 100% !important; /* Ensure full width */
+  max-height: 400px; /* Set a maximum height */
+  overflow: hidden; /* Clip overflow content */
+  height: auto !important; /* Allow scaling based on content */
+  display: block;
+  margin: 0;
+}
+
+/* Responsive adjustments for smaller devices */
+@media (max-width: 768px) {
+  .writings-talks-section .card blockquote.twitter-tweet iframe,
+  .writings-talks-section .card iframe.instagram-embed {
+    max-height: 300px; /* Reduce maximum height on smaller screens */
+  }
 }
 
 /* --------------------------------------- */
