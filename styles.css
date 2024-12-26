@@ -334,7 +334,6 @@ section {
   background-color: #ddd;
   transform: scale(1.05);
 }
-
 /* --------------------------------------- */
 /*       WRITINGS AND TALKS SECTION        */
 /* --------------------------------------- */
@@ -348,7 +347,8 @@ section {
 .writings-talks-section h2 {
   font-size: var(--block-title-size);
   color: var(--text-color);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .writings-talks-section .content-container {
@@ -362,11 +362,11 @@ section {
   background: var(--card-background);
   border: 1px solid var(--card-border);
   border-radius: 12px;
-  padding: var(--card-padding);
-  margin-bottom: var(--card-margin-bottom);
   box-shadow: 0 4px 12px var(--card-shadow);
   transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  overflow: hidden;
   max-width: 350px;
+  width: 100%;
 }
 
 .writings-talks-section .card:hover {
@@ -377,33 +377,45 @@ section {
 .writings-talks-section .card h3 {
   font-size: var(--card-title-size);
   color: #000;
-  margin-bottom: 0.5rem;
+  margin: 0;
+  padding: var(--card-padding);
 }
 
 .writings-talks-section .project-date {
   font-style: italic;
-  margin-bottom: 0.5rem;
+  margin: 0;
+  padding: 0 var(--card-padding);
   color: #666;
 }
 
 .writings-talks-section .description {
   font-size: var(--card-body-size);
   line-height: 1.4;
-  margin-bottom: 1rem;
+  margin: 0;
+  padding: 0 var(--card-padding) var(--card-padding);
   color: var(--text-color);
 }
 
 /* Embedded Content (Twitter and Instagram) */
-blockquote.twitter-tweet {
-  margin: 1rem auto;
+.writings-talks-section .card blockquote.twitter-tweet {
+  margin: 0;
+  padding: 0;
+  width: 100% !important;
+  box-sizing: border-box;
 }
 
-iframe.instagram-embed {
-  border-radius: 12px;
-  width: 100%;
-  height: 400px;
+.writings-talks-section .card blockquote.twitter-tweet iframe {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto;
+}
+
+.writings-talks-section .card iframe.instagram-embed {
+  width: 100% !important;
+  max-width: 100% !important;
   border: none;
   overflow: hidden;
+  border-radius: 0;
 }
 
 /* Responsive Layout */
@@ -418,6 +430,15 @@ iframe.instagram-embed {
   }
 }
 
+@media (max-width: 480px) {
+  .writings-talks-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .writings-talks-section .card {
+    padding: 1rem;
+  }
+}
 
 /* --------------------------------------- */
 /*             SKILLS SECTION             */
