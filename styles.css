@@ -335,6 +335,89 @@ section {
   transform: scale(1.05);
 }
 
+/* --------------------------------------- */
+/*       WRITINGS AND TALKS SECTION        */
+/* --------------------------------------- */
+.writings-talks-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--section-padding) 2rem;
+  text-align: left;
+}
+
+.writings-talks-section h2 {
+  font-size: var(--block-title-size);
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.writings-talks-section .content-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.writings-talks-section .card {
+  background: var(--card-background);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: var(--card-padding);
+  margin-bottom: var(--card-margin-bottom);
+  box-shadow: 0 4px 12px var(--card-shadow);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  max-width: 350px;
+}
+
+.writings-talks-section .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.writings-talks-section .card h3 {
+  font-size: var(--card-title-size);
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.writings-talks-section .project-date {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.writings-talks-section .description {
+  font-size: var(--card-body-size);
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+/* Embedded Content (Twitter and Instagram) */
+blockquote.twitter-tweet {
+  margin: 1rem auto;
+}
+
+iframe.instagram-embed {
+  border-radius: 12px;
+  width: 100%;
+  height: 400px;
+  border: none;
+  overflow: hidden;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .writings-talks-section .content-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .writings-talks-section .card {
+    max-width: 100%;
+  }
+}
+
 
 /* --------------------------------------- */
 /*             SKILLS SECTION             */
