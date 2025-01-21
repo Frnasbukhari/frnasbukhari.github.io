@@ -2,6 +2,7 @@
 /*            VARIABLES & BASICS           */
 /* --------------------------------------- */
 :root {
+  /* Colors, Fonts & Transitions */
   --primary-color: #007BFF;
   --secondary-color: #0056b3;
   --background-color: #f7f7f7;
@@ -12,18 +13,16 @@
   --font-family: 'Inter', sans-serif;
   --transition-speed: 0.3s;
 
-  /* Title & Spacing Adjustments */
-  --block-title-size: 1.6rem; /* Section titles */
-  --card-title-size: 1.1rem;  /* Card h3 titles */
+  /* Title & Spacing */
+  --block-title-size: 1.6rem;
+  --card-title-size: 1.1rem;
   --section-padding: 2rem;
   --card-margin-bottom: 1rem;
   --card-padding: 1.5rem;
 
-  /* Skill Icon & Star Colors */
+  /* Skill Icons & Text Sizes */
   --skill-icon-size: 14px;
-  --skill-star-color: #000; /* black stars */
-
-  /* Smaller text settings */
+  --skill-star-color: #000;
   --intro-name-size: 2rem;
   --intro-text-size: 1rem;
   --card-body-size: 0.8rem;
@@ -32,7 +31,6 @@
 * {
   box-sizing: border-box;
 }
-
 body {
   font-family: var(--font-family);
   margin: 0;
@@ -41,7 +39,6 @@ body {
   background: var(--background-color);
   line-height: 1.6;
 }
-
 a {
   color: var(--primary-color);
   text-decoration: none;
@@ -50,12 +47,9 @@ a:hover,
 a:focus {
   text-decoration: underline;
 }
-
 h1, h2, h3, h4 {
   margin: 0;
 }
-
-/* Focus outline for accessibility */
 a:focus,
 button:focus,
 .nav-link:focus,
@@ -75,7 +69,6 @@ button:focus,
   width: 100%;
   z-index: 1000;
 }
-
 .navbar-container {
   display: flex;
   justify-content: space-between;
@@ -84,21 +77,17 @@ button:focus,
   margin: auto;
   padding: 0.5rem 1rem;
 }
-
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--text-color);
 }
-
-/* Toggle Button */
 .navbar-toggle {
   display: none;
   background: none;
   border: none;
   cursor: pointer;
 }
-
 .hamburger,
 .hamburger::before,
 .hamburger::after {
@@ -109,29 +98,19 @@ button:focus,
   position: relative;
   transition: all var(--transition-speed) ease-in-out;
 }
-
 .hamburger::before,
 .hamburger::after {
   content: '';
   position: absolute;
   left: 0;
 }
-.hamburger::before {
-  top: -8px;
-}
-.hamburger::after {
-  top: 8px;
-}
-
-/* Navbar Links */
+.hamburger::before { top: -8px; }
+.hamburger::after { top: 8px; }
 .navbar-links {
   display: flex;
   gap: 1.5rem;
 }
-
-.navbar-links li {
-  list-style: none;
-}
+.navbar-links li { list-style: none; }
 .navbar-links li a {
   font-size: 1rem;
   font-weight: 500;
@@ -139,9 +118,7 @@ button:focus,
   transition: color var(--transition-speed) ease-in-out;
 }
 .navbar-links li a:hover,
-.navbar-links li a.active {
-  color: var(--primary-color);
-}
+.navbar-links li a.active { color: var(--primary-color); }
 
 /* --------------------------------------- */
 /*             HEADER SECTION              */
@@ -153,7 +130,6 @@ button:focus,
   padding: 4rem 1rem;
   background: #fff;
 }
-
 .intro-container {
   display: flex;
   align-items: center;
@@ -164,29 +140,17 @@ button:focus,
   text-align: center;
   justify-content: center;
 }
-
 .profile-pic {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
 }
-
-/* Smaller name & intro text */
 .intro-text {
   max-width: 600px;
 }
-.intro-text h1 {
-  font-size: var(--intro-name-size);
-  margin-bottom: 0.5rem;
-}
-.intro-text p {
-  margin-bottom: 1rem;
-  font-size: var(--intro-text-size);
-  line-height: 1.4;
-}
-
-/* Social Links */
+.intro-text h1 { font-size: var(--intro-name-size); margin-bottom: 0.5rem; }
+.intro-text p { margin-bottom: 1rem; font-size: var(--intro-text-size); line-height: 1.4; }
 .social-links {
   display: flex;
   gap: 1rem;
@@ -195,17 +159,12 @@ button:focus,
   list-style: none;
   padding: 0;
 }
-.social-links li {
-  list-style: none;
-}
 .icon {
   width: 24px;
   height: 24px;
   transition: transform var(--transition-speed) ease-in-out;
 }
-.icon:hover {
-  transform: scale(1.1);
-}
+.icon:hover { transform: scale(1.1); }
 
 /* --------------------------------------- */
 /*             SECTIONS & TITLES           */
@@ -216,22 +175,18 @@ section {
   text-align: left;
   padding: var(--section-padding) 2rem;
 }
-
-/* Small gap between the section title and the first card */
 .experience-section h2,
 .education-section h2,
 .projects-section h2,
 .writings-talks-section h2,
-.skills-section h2 {
-  margin-bottom: 0.5rem;
-}
+.skills-section h2 { margin-bottom: 0.5rem; }
 
 /* --------------------------------------- */
-/*            COMPANY/PROJECT LOGOS        */
+/*         COMPANY/PROJECT LOGOS           */
 /* --------------------------------------- */
 .company-logo {
-  width: 30px;   /* Reduced from 40px to 30px */
-  height: 30px;  /* ensure it doesn't exceed 30px in height */
+  width: 30px;
+  height: 30px;
   margin-right: 0.5rem;
   object-fit: contain;
   vertical-align: middle;
@@ -243,84 +198,52 @@ section {
 .card {
   background: var(--card-background);
   border: 1px solid var(--card-border);
-  /* bigger border-radius to ensure 100% noticeable corners */
-  border-radius: 12px; 
+  border-radius: 12px;
   padding: var(--card-padding);
   margin-bottom: var(--card-margin-bottom);
   box-shadow: 0 4px 12px var(--card-shadow);
-
-  /* Overflows hidden => Child media corners are clipped 100% */
-  overflow: hidden; 
+  overflow: hidden;
   transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
-
-/* On hover, raise the card a bit */
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
-
-/* Card Titles: smaller, black */
 .card h3 {
   font-size: var(--card-title-size);
   color: #000;
   margin-bottom: 0.5rem;
-  display: flex; /* ensures the logo + text can be side by side */
+  display: flex;
   align-items: center;
 }
-
-.project-date {
-  font-style: italic;
-  margin-bottom: 0.5rem;
-}
-
-/* Card text is smaller */
+.project-date { font-style: italic; margin-bottom: 0.5rem; }
 .card p,
 .card ul li {
   font-size: var(--card-body-size);
   line-height: 1.4;
   color: var(--text-color);
 }
-
-/* Card Lists */
-.card ul {
-  padding-left: 1.5rem;
-  list-style: disc;
-}
-.card ul li {
-  margin-bottom: 0.6rem;
-}
-
-/* 
-  Guarantee fully rounded corners by also giving 
-  .card-media the same radius, 
-  though .card overflow: hidden should handle it. 
-*/
+.card ul { padding-left: 1.5rem; list-style: disc; }
+.card ul li { margin-bottom: 0.6rem; }
 .card-media {
   display: block;
   width: 100%;
   height: auto;
   margin-top: 0.5rem;
-  border-radius: 12px; /* Double insurance for 100% smooth corners */
+  border-radius: 12px;
 }
-
-/* Picture Title / Subtitle for the image */
 .picture-title {
   font-size: 0.85rem;
-  margin-top: 1rem;
-  margin-bottom: 0.4rem;
+  margin: 1rem 0 0.4rem;
   color: #333;
   font-weight: 600;
 }
-
-/* Tools as Chips */
 .tool-list {
   margin-top: 0.5rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
-
 .tool-chip {
   display: inline-block;
   background-color: #eee;
@@ -339,47 +262,32 @@ section {
 /* --------------------------------------- */
 /*       WRITINGS AND TALKS SECTION        */
 /* --------------------------------------- */
-
 .styled-button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #007bff; /* GitHub blue */
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
 }
-
 .styled-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #0056b3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-
-/* Ensure tweets take up the full width of the card */
-.writings-talks-section .card blockquote.twitter-tweet {
+.writings-talks-section .card blockquote.twitter-tweet,
+.writings-talks-section .card blockquote.twitter-tweet iframe {
   margin: 0;
   padding: 0;
   width: 100%;
-  box-sizing: border-box; /* Include padding/border in width calculations */
+  box-sizing: border-box;
   display: block;
+  border: none;
 }
-
-/* Adjust the embedded iframe */
-.writings-talks-section .card blockquote.twitter-tweet iframe {
-  width: 100% !important; /* Force the iframe to take the full width */
-  max-width: 100% !important;
-  height: auto !important; /* Ensure proper scaling */
-  display: block; /* Ensure it respects the parent block layout */
-  margin: 0; /* Remove default margins */
-  padding: 0; /* Remove default padding */
-  border: none; /* Ensure no border is visible */
-}
-
-/* If you're actually using <iframe class="instagram-embed">, these rules apply: */
 .writings-talks-section .card iframe.instagram-embed {
   width: 100% !important;
   max-width: 100% !important;
@@ -389,7 +297,7 @@ section {
 }
 
 /* --------------------------------------- */
-/*             SKILLS SECTION             */
+/*             SKILLS SECTION              */
 /* --------------------------------------- */
 .skills-section {
   max-width: 800px;
@@ -398,14 +306,12 @@ section {
   background-color: #f9f9f9;
   border-radius: 12px;
 }
-
 .skills-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
 }
-
 .skill-category {
   flex: 1 1 250px;
   background: #fff;
@@ -416,10 +322,8 @@ section {
   transition: box-shadow var(--transition-speed);
 }
 .skill-category:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-
-/* Smaller, black skill titles */
 .skill-category h3 {
   font-size: var(--card-title-size);
   color: #000;
@@ -427,20 +331,17 @@ section {
   display: flex;
   align-items: center;
 }
-
 .skill-icon {
   width: var(--skill-icon-size);
   height: var(--skill-icon-size);
   margin-right: 0.5rem;
   vertical-align: middle;
 }
-
 .skill-level {
   color: var(--skill-star-color) !important;
   margin-left: 0.5rem;
   font-size: 1rem;
 }
-
 .skill-category ul {
   list-style-type: none;
   padding: 0;
@@ -452,12 +353,8 @@ section {
   display: flex;
   align-items: center;
 }
-.skill-category ul li .skill-icon {
-  margin-right: 0.5rem;
-}
-.skill-category ul li .skill-level {
-  margin-left: auto;
-}
+.skill-category ul li .skill-icon { margin-right: 0.5rem; }
+.skill-category ul li .skill-level { margin-left: auto; }
 .skill-category ul li:hover {
   color: var(--primary-color);
   transition: color var(--transition-speed) ease;
@@ -468,7 +365,7 @@ section {
 }
 
 /* --------------------------------------- */
-/*            CONTACT SECTION             */
+/*             CONTACT SECTION             */
 /* --------------------------------------- */
 .contact-section {
   max-width: 800px;
@@ -476,7 +373,6 @@ section {
   padding: var(--section-padding) 2rem;
   text-align: center;
 }
-
 .contact-section h2 {
   font-size: var(--block-title-size);
   margin-bottom: 1rem;
@@ -497,15 +393,8 @@ footer {
 /* --------------------------------------- */
 /*       RESPONSIVE MEDIA QUERIES         */
 /* --------------------------------------- */
-
-/* For Tablets & Below */
 @media (max-width: 768px) {
-  /* Show toggle button */
-  .navbar-toggle {
-    display: block;
-  }
-
-  /* Hide links by default */
+  .navbar-toggle { display: block; }
   .navbar-links {
     display: none;
     flex-direction: column;
@@ -519,10 +408,7 @@ footer {
     border-radius: 8px;
     padding: 1rem;
   }
-  .navbar-links.active {
-    display: flex; /* Toggled */
-  }
-
+  .navbar-links.active { display: flex; }
   .intro-container {
     flex-direction: column;
     align-items: center;
@@ -533,36 +419,18 @@ footer {
     width: 120px;
     height: 120px;
   }
-  .skill-category {
-    flex: 1 1 100%;
-  }
+  .skill-category { flex: 1 1 100%; }
 }
-
-/* For Mobile Screens */
 @media (max-width: 480px) {
-  .navbar-container {
-    padding: 0.5rem;
-  }
-  .navbar-brand {
-    font-size: 1.25rem;
-  }
-  .navbar-links {
-    width: 150px;
-  }
-  .intro-container {
-    padding: 0 1rem;
-  }
+  .navbar-container { padding: 0.5rem; }
+  .navbar-brand { font-size: 1.25rem; }
+  .navbar-links { width: 150px; }
+  .intro-container { padding: 0 1rem; }
   .profile-pic {
     width: 100px;
     height: 100px;
   }
-  h1 {
-    font-size: 1.8rem;
-  }
-  h2 {
-    font-size: 1.3rem;
-  }
-  .skill-category h3 {
-    font-size: 1rem;
-  }
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.3rem; }
+  .skill-category h3 { font-size: 1rem; }
 }
