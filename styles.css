@@ -340,6 +340,25 @@ section {
 /*       WRITINGS AND TALKS SECTION        */
 /* --------------------------------------- */
 
+.styled-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff; /* GitHub blue */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.styled-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 /* Ensure tweets take up the full width of the card */
 .writings-talks-section .card blockquote.twitter-tweet {
   margin: 0;
