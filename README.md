@@ -2,6 +2,8 @@
 
 Welcome to my personal portfolio! This repository is the heart of my digital presence, showcasing my skills, projects, and experiences. Built with care and a touch of AI magic, this portfolio is a reflection of my journey in technology and creativity.
 
+Check out my live portfolio here: [Live Portfolio](https://frnasbukhari.github.io/)
+
 ## Deployment on GitHub Pages
 
 Follow these simple steps to deploy the portfolio using GitHub Pages:
